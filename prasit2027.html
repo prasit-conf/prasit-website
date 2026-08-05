@@ -579,6 +579,50 @@ nav {
 }
 
 /* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.faq-list { margin-top: 16px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 20px;
+  margin-bottom: 10px;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 14px 0;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--maroon);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 2px;
+}
+.faq-item p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  padding-bottom: 16px;
+}
+
+/* ══════════════════════════════════════
    COMMITTEE
 ══════════════════════════════════════ */
 .committee-grid {
@@ -905,6 +949,7 @@ footer .footer-links a:hover { color: var(--gold); }
       <li><a href="#dates" onclick="show('dates')" id="nav-dates">Dates</a></li>
       <li><a href="#committee" onclick="show('committee')" id="nav-committee">Committee</a></li>
       <li><a href="#review" onclick="show('review')" id="nav-review">Review</a></li>
+      <li><a href="#faq" onclick="show('faq')" id="nav-faq">FAQ</a></li>
       <li><a href="#registration" onclick="show('registration')" id="nav-registration">Registration</a></li>
       <li><a href="#policies" onclick="show('policies')" id="nav-policies">Policies</a></li>
       <li><a href="#contact" onclick="show('contact')" id="nav-contact">Contact</a></li>
@@ -919,15 +964,16 @@ footer .footer-links a:hover { color: var(--gold); }
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="#" onclick="show('home');closeMobile()" id="mnav-home" class="active">Home</a></li>
-    <li><a href="#" onclick="show('about');closeMobile()" id="mnav-about">About</a></li>
-    <li><a href="#" onclick="show('cfp');closeMobile()" id="mnav-cfp">Call for Papers</a></li>
-    <li><a href="#" onclick="show('dates');closeMobile()" id="mnav-dates">Important Dates</a></li>
-    <li><a href="#" onclick="show('committee');closeMobile()" id="mnav-committee">Committee</a></li>
-    <li><a href="#" onclick="show('review');closeMobile()" id="mnav-review">Review Process</a></li>
-    <li><a href="#" onclick="show('registration');closeMobile()" id="mnav-registration">Registration</a></li>
-    <li><a href="#" onclick="show('policies');closeMobile()" id="mnav-policies">Policies</a></li>
-    <li><a href="#" onclick="show('contact');closeMobile()" id="mnav-contact">Contact</a></li>
+    <li><a href="#home" onclick="show('home');closeMobile()" id="mnav-home" class="active">Home</a></li>
+    <li><a href="#about" onclick="show('about');closeMobile()" id="mnav-about">About</a></li>
+    <li><a href="#cfp" onclick="show('cfp');closeMobile()" id="mnav-cfp">Call for Papers</a></li>
+    <li><a href="#dates" onclick="show('dates');closeMobile()" id="mnav-dates">Important Dates</a></li>
+    <li><a href="#committee" onclick="show('committee');closeMobile()" id="mnav-committee">Committee</a></li>
+    <li><a href="#review" onclick="show('review');closeMobile()" id="mnav-review">Review Process</a></li>
+    <li><a href="#faq" onclick="show('faq');closeMobile()" id="mnav-faq">FAQ</a></li>
+    <li><a href="#registration" onclick="show('registration');closeMobile()" id="mnav-registration">Registration</a></li>
+    <li><a href="#policies" onclick="show('policies');closeMobile()" id="mnav-policies">Policies</a></li>
+    <li><a href="#contact" onclick="show('contact');closeMobile()" id="mnav-contact">Contact</a></li>
   </ul>
 </div>
 
@@ -1146,6 +1192,21 @@ footer .footer-links a:hover { color: var(--gold); }
       <div class="track"><h3>Networks &amp; Communication</h3><p>Wireless sensor networks · Network slicing · Quality of service · Delay-tolerant networks · Protocol optimization · 5G applications</p></div>
     </div>
   </div>
+
+  <div class="section">
+    <div class="section-title">Presentation format</div>
+    <div class="section-sub">What to expect if your paper is accepted</div>
+    <div class="sub-format">
+      <h4>Session details</h4>
+      <ul>
+        <li>Format <span>Fully online, live video presentation</span></li>
+        <li>Presentation length <span>10–12 minutes + 3–5 min Q&amp;A</span></li>
+        <li>Platform <span>Shared with accepted authors closer to the date</span></li>
+        <li>Slides <span>PowerPoint or PDF, author-prepared</span></li>
+      </ul>
+    </div>
+    <div class="notice">Detailed scheduling, session platform, and technical requirements (camera/mic setup, screen-share instructions) will be emailed to accepted authors after the acceptance notification date. See the <a href="#faq" onclick="show('faq')" style="color:var(--maroon);font-weight:600">FAQ</a> for more.</div>
+  </div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -1227,6 +1288,12 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">Reviewers with PhD and active publication record — being assembled for September 2026</div>
     <div class="notice">The TPC will be published here once confirmed, with each member's full name, institutional affiliation, and research area listed. We target 25+ reviewers across all 6 tracks. Reviewer recruitment will begin in July 2026. If you hold a PhD in CS/IT and have publications in the last 3 years, you are welcome to express interest at <a href="mailto:tpc@prasit.org" style="color:var(--maroon);font-weight:600">tpc@prasit.org</a>.</div>
   </div>
+
+  <div class="section">
+    <div class="section-title">Keynote speakers</div>
+    <div class="section-sub">To be announced</div>
+    <div class="notice">Keynote speaker invitations are in progress. Confirmed speakers, along with their talk titles and abstracts, will be published here as they are finalized — target: January 2027. Faculty and industry researchers interested in delivering a keynote are welcome to write to <a href="mailto:contact@prasit.org" style="color:var(--maroon);font-weight:600">contact@prasit.org</a>.</div>
+  </div>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -1287,6 +1354,57 @@ footer .footer-links a:hover { color: var(--gold); }
       </div>
     </div>
     <div class="notice"><strong>Our commitment:</strong> We target a 25–35% acceptance rate. This is not a quota — it is a quality standard. If submissions are of high quality, acceptance may be higher. If quality is poor, it will be lower.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<div id="faq" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">FAQ</div>
+    <h1>Frequently asked questions</h1>
+    <p>Straight answers to the questions we get most</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">About PRASIT 2027</div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>This is a first-edition conference. Why should I trust it?</summary>
+        <p>That's a fair question to ask of any new conference. We don't have past proceedings to point to yet, so we've tried to make everything else verifiable instead: our full review process is published on the <a href="#review" onclick="show('review')" style="color:var(--maroon);font-weight:600">Review Process page</a>, our policies are public, and we're upfront about what's confirmed versus pending (like CrossRef DOI registration). We'd rather under-promise than overstate our status.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is PRASIT 2027 indexed in Scopus, Web of Science, or IEEE Xplore?</summary>
+        <p>No, not at this time, and we won't claim otherwise. Each accepted paper will receive a CrossRef DOI once registration is finalized, making it citable and findable, and proceedings will be submitted for Google Scholar indexing. Scopus/WoS/IEEE Xplore indexing is a separate, longer process that a first-edition conference is not eligible for immediately.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is acceptance guaranteed if I pay the registration fee?</summary>
+        <p>No. Every paper goes through double-blind peer review regardless of fee payment, and papers can be rejected. Registration fees cover conference operations (platform, certificates, proceedings assembly) — they are not a pay-to-publish arrangement.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Submission &amp; presentation</div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is PRASIT 2027 an online or in-person conference?</summary>
+        <p>Fully online. Authors present live over video call during the 15–16 March 2027 sessions; exact platform and scheduling details will be shared with accepted authors closer to the date.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if my paper is rejected — do I get any feedback?</summary>
+        <p>Yes. All authors, accepted or rejected, receive the full reviewer comments. Rejected authors get feedback explaining what was lacking and how to improve, rather than a bare rejection notice.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I withdraw my paper after it's accepted?</summary>
+        <p>Yes, subject to our refund schedule: full refund if withdrawn more than 30 days before the conference, 50% within 15–30 days, and no refund within 14 days of the conference. See the <a href="#policies" onclick="show('policies')" style="color:var(--maroon);font-weight:600">Policies page</a> for full terms.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is a fee waiver available?</summary>
+        <p>Students from economically weaker backgrounds may apply for a fee waiver by writing to <a href="mailto:contact@prasit.org" style="color:var(--maroon);font-weight:600">contact@prasit.org</a> with their institution ID and a brief note.</p>
+      </details>
+    </div>
   </div>
 </div>
 
@@ -1485,6 +1603,7 @@ footer .footer-links a:hover { color: var(--gold); }
     <a href="#home" onclick="show('home')">Home</a>
     <a href="#cfp" onclick="show('cfp')">Call for Papers</a>
     <a href="#dates" onclick="show('dates')">Dates</a>
+    <a href="#faq" onclick="show('faq')">FAQ</a>
     <a href="#registration" onclick="show('registration')">Registration</a>
     <a href="#policies" onclick="show('policies')">Policies</a>
     <a href="#contact" onclick="show('contact')">Contact</a>
@@ -1495,7 +1614,7 @@ footer .footer-links a:hover { color: var(--gold); }
 </footer>
 
 <script>
-const VALID_PAGES = ['home','about','cfp','dates','committee','review','registration','policies','contact'];
+const VALID_PAGES = ['home','about','cfp','dates','committee','review','faq','registration','policies','contact'];
 
 function show(id, updateHash = true) {
   if (!VALID_PAGES.includes(id)) id = 'home';
