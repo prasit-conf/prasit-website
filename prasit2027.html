@@ -41,7 +41,7 @@
   --cream-mid: #EDE6DE;
   --text: #1a1a1a;
   --text-mid: #444;
-  --text-light: #777;
+  --text-light: #686868;
   --border: #d4c9c9;
   --bg-card: #faf7f5;
   --nav-h: 64px;
@@ -697,7 +697,7 @@ nav {
 }
 
 .contact-card a:hover {
-  color: var(--gold);
+  color: var(--maroon-mid);
   text-decoration: underline;
 }
 
@@ -725,6 +725,27 @@ nav {
 .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
 
 /* ══════════════════════════════════════
+   SKIP LINK (accessibility)
+══════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  background: var(--gold);
+  color: var(--maroon);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 6px;
+  z-index: 2000;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+main:focus { outline: none; }
+
+/* ══════════════════════════════════════
    FOOTER
 ══════════════════════════════════════ */
 footer {
@@ -741,7 +762,7 @@ footer .footer-logo {
 }
 
 footer p {
-  color: #777;
+  color: #8f8f8f;
   font-size: 11.5px;
   line-height: 2;
 }
@@ -846,11 +867,14 @@ footer .footer-links a:hover { color: var(--gold); }
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ── NAVIGATION ── -->
-<nav>
+<nav aria-label="Main navigation">
   <div class="nav-inner">
     <div class="nav-brand">
-      <svg class="nav-logo" viewBox="60 45 560 165" xmlns="http://www.w3.org/2000/svg" style="height:44px;width:auto;display:block;">
+      <svg class="nav-logo" viewBox="60 45 560 165" xmlns="http://www.w3.org/2000/svg" style="height:44px;width:auto;display:block;" role="img" aria-labelledby="navLogoTitle">
+        <title id="navLogoTitle">PRASIT 2027 logo — Deepam lamp with Sanskrit word Prasāra</title>
         <ellipse cx="340" cy="155" rx="38" ry="8" fill="#C9A84C" opacity="0.9"/>
         <rect x="334" y="115" width="12" height="42" rx="4" fill="#C9A84C"/>
         <path d="M310 118 Q320 100 340 96 Q360 100 370 118 Q362 128 340 130 Q318 128 310 118Z" fill="#C9A84C"/>
@@ -907,6 +931,8 @@ footer .footer-links a:hover { color: var(--gold); }
   </ul>
 </div>
 
+<main id="main-content" tabindex="-1">
+
 <!-- ══════════════════════════════════════
      HOME PAGE
 ══════════════════════════════════════ -->
@@ -941,22 +967,22 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">Factual commitments — not aspirational claims</div>
     <div class="cards">
       <div class="card">
-        <div class="card-icon">🛡️</div>
+        <div class="card-icon" aria-hidden="true">🛡️</div>
         <h3>Double-blind peer review</h3>
         <p>Every paper receives 3 independent reviews. Minimum 4-week review cycle. Reviewer feedback sent to all authors — accepted and rejected.</p>
       </div>
       <div class="card">
-        <div class="card-icon">📊</div>
+        <div class="card-icon" aria-hidden="true">📊</div>
         <h3>Target acceptance rate: 25–35%</h3>
         <p>A quality threshold, not a quota. If submissions are weak, acceptance will be lower. Rejection includes constructive reviewer comments.</p>
       </div>
       <div class="card">
-        <div class="card-icon">📜</div>
+        <div class="card-icon" aria-hidden="true">📜</div>
         <h3>CrossRef DOI</h3>
         <p>Each accepted paper receives a permanent CrossRef DOI, making it globally findable and citable. Proceedings submitted for Google Scholar indexing.</p>
       </div>
       <div class="card">
-        <div class="card-icon">💰</div>
+        <div class="card-icon" aria-hidden="true">💰</div>
         <h3>Flat fee: ₹2,760 / $80</h3>
         <p>Single fee for all Indian categories. Fee waivers available for students from economically weaker backgrounds on request.</p>
       </div>
@@ -1012,12 +1038,12 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">Who runs PRASIT</div>
     <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(260px,1fr))">
       <div class="card">
-        <div class="card-icon">🏛️</div>
+        <div class="card-icon" aria-hidden="true">🏛️</div>
         <h3>PRASIT Research Foundation</h3>
         <p>The organizing body for PRASIT 2027. Currently registered as a Sole Proprietorship (MSME) in West Bengal, India, with transition to a Section 8 Non-Profit planned in 2026–27.</p>
       </div>
       <div class="card">
-        <div class="card-icon">📮</div>
+        <div class="card-icon" aria-hidden="true">📮</div>
         <h3>Registered postal address</h3>
         <p>PRASIT Research Foundation<br>Durgapur, West Bengal — 713201<br>India<br><br>
         <a href="mailto:contact@prasit.org" style="color:var(--maroon);font-weight:600">contact@prasit.org</a><br>
@@ -1032,17 +1058,17 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">PRASIT 2027 is fully online</div>
     <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr))">
       <div class="card">
-        <div class="card-icon">💻</div>
+        <div class="card-icon" aria-hidden="true">💻</div>
         <h3>Online only</h3>
         <p>PRASIT 2027 (15–16 March 2027) will be conducted entirely online. There is no physical venue. All sessions, presentations, and keynotes will be held via video conferencing.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🌐</div>
+        <div class="card-icon" aria-hidden="true">🌐</div>
         <h3>Platform</h3>
         <p>Sessions will be hosted on a standard video conferencing platform (e.g. Zoom or Google Meet). Registered participants will receive joining links via email before the conference.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🕐</div>
+        <div class="card-icon" aria-hidden="true">🕐</div>
         <h3>Timezone</h3>
         <p>All session timings are in Indian Standard Time (IST, UTC+5:30). A detailed schedule will be published by February 2027.</p>
       </div>
@@ -1311,19 +1337,19 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-title">Contact us</div>
     <div class="contact-grid">
       <div class="contact-card">
-        <h4><span class="icon">✉️</span> General enquiries</h4>
+        <h4><span class="icon" aria-hidden="true">✉️</span> General enquiries</h4>
         <p><a href="mailto:contact@prasit.org">contact@prasit.org</a><br><br>We respond within 48 hours on working days.</p>
       </div>
       <div class="contact-card">
-        <h4><span class="icon">📄</span> Paper submissions</h4>
+        <h4><span class="icon" aria-hidden="true">📄</span> Paper submissions</h4>
         <p>Via the PRASIT Submission Portal only.<br>Do not email papers directly.<br><br><a href="https://prasit-portal.vercel.app/" target="_blank" rel="noopener">prasit-portal.vercel.app</a></p>
       </div>
       <div class="contact-card">
-        <h4><span class="icon">👥</span> Join as reviewer</h4>
+        <h4><span class="icon" aria-hidden="true">👥</span> Join as reviewer</h4>
         <p><a href="mailto:tpc@prasit.org">tpc@prasit.org</a><br><br>PhD holders with active publications are welcome to apply to join the TPC.</p>
       </div>
       <div class="contact-card">
-        <h4><span class="icon">🔗</span> Follow us</h4>
+        <h4><span class="icon" aria-hidden="true">🔗</span> Follow us</h4>
         <p>Instagram: <a href="https://instagram.com/prasitconf" target="_blank" rel="noopener">@prasitconf</a><br>LinkedIn: <span style="color:var(--text-light)">Coming soon</span></p>
       </div>
     </div>
@@ -1334,21 +1360,21 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">Legal and registered contact information</div>
     <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(240px,1fr))">
       <div class="card">
-        <div class="card-icon">🏢</div>
+        <div class="card-icon" aria-hidden="true">🏢</div>
         <h3>Registered organization</h3>
         <p><strong>PRASIT Research Foundation</strong><br>MSME-registered · Sole Proprietorship<br>West Bengal, India<br><br>
         MSME Udyam Registration: WB-19-0XXXXXX (pending update)<br>
         <a href="https://prasit.org" style="color:var(--maroon);font-weight:600" target="_blank">prasit.org</a></p>
       </div>
       <div class="card">
-        <div class="card-icon">📮</div>
+        <div class="card-icon" aria-hidden="true">📮</div>
         <h3>Postal address</h3>
         <p>PRASIT Research Foundation<br>
         Durgapur, West Bengal — 713201<br>
         India</p>
       </div>
       <div class="card">
-        <div class="card-icon">📧</div>
+        <div class="card-icon" aria-hidden="true">📧</div>
         <h3>Email contacts</h3>
         <p>General: <a href="mailto:contact@prasit.org" style="color:var(--maroon)">contact@prasit.org</a><br>
         TPC / Reviewers: <a href="mailto:tpc@prasit.org" style="color:var(--maroon)">tpc@prasit.org</a><br><br>
@@ -1388,22 +1414,22 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">Checked at desk review before any paper enters peer review</div>
     <div class="cards" style="grid-template-columns:repeat(auto-fit, minmax(200px,1fr))">
       <div class="card">
-        <div class="card-icon">✅</div>
+        <div class="card-icon" aria-hidden="true">✅</div>
         <h3>Acceptable: below 15%</h3>
         <p>Papers with similarity below 15% (excluding references and template boilerplate) proceed to peer review.</p>
       </div>
       <div class="card">
-        <div class="card-icon">⚠️</div>
+        <div class="card-icon" aria-hidden="true">⚠️</div>
         <h3>Borderline: 15–25%</h3>
         <p>Papers in this range are reviewed by the TPC Chair. If similarity is concentrated in one source, the paper may be desk-rejected or returned for revision.</p>
       </div>
       <div class="card">
-        <div class="card-icon">❌</div>
+        <div class="card-icon" aria-hidden="true">❌</div>
         <h3>Rejected: above 25%</h3>
         <p>Papers above 25% similarity are rejected at desk check. The submitting author is notified with the similarity report.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🚫</div>
+        <div class="card-icon" aria-hidden="true">🚫</div>
         <h3>Self-plagiarism</h3>
         <p>Submitting your own prior work without disclosure and proper citation is treated as plagiarism and results in desk rejection.</p>
       </div>
@@ -1450,6 +1476,8 @@ footer .footer-links a:hover { color: var(--gold); }
   </div>
 </div>
 
+</main>
+
 <footer>
   <div class="footer-logo">प्रसार</div>
   <p class="gold">PRASIT 2027 — Premier Research &amp; Academic Symposium in Information Technology</p>
@@ -1473,7 +1501,8 @@ function show(id) {
   // Deactivate all nav links (desktop + mobile)
   document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => a.classList.remove('active'));
   // Show target page
-  document.getElementById(id).classList.add('active');
+  const targetPage = document.getElementById(id);
+  targetPage.classList.add('active');
   // Activate desktop nav link
   const desktopLink = document.getElementById('nav-' + id);
   if (desktopLink) desktopLink.classList.add('active');
@@ -1482,6 +1511,12 @@ function show(id) {
   if (mobileLink) mobileLink.classList.add('active');
   // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Move focus to the new page's heading so screen readers announce the change
+  const heading = targetPage.querySelector('h1');
+  if (heading) {
+    heading.setAttribute('tabindex', '-1');
+    heading.focus();
+  }
   // Prevent default
   return false;
 }
