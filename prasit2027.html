@@ -899,15 +899,15 @@ footer .footer-links a:hover { color: var(--gold); }
     </div>
 
     <ul class="nav-links">
-      <li><a href="#" onclick="show('home')" id="nav-home" class="active">Home</a></li>
-      <li><a href="#" onclick="show('about')" id="nav-about">About</a></li>
-      <li><a href="#" onclick="show('cfp')" id="nav-cfp">Call for Papers</a></li>
-      <li><a href="#" onclick="show('dates')" id="nav-dates">Dates</a></li>
-      <li><a href="#" onclick="show('committee')" id="nav-committee">Committee</a></li>
-      <li><a href="#" onclick="show('review')" id="nav-review">Review</a></li>
-      <li><a href="#" onclick="show('registration')" id="nav-registration">Registration</a></li>
-      <li><a href="#" onclick="show('policies')" id="nav-policies">Policies</a></li>
-      <li><a href="#" onclick="show('contact')" id="nav-contact">Contact</a></li>
+      <li><a href="#home" onclick="show('home')" id="nav-home" class="active">Home</a></li>
+      <li><a href="#about" onclick="show('about')" id="nav-about">About</a></li>
+      <li><a href="#cfp" onclick="show('cfp')" id="nav-cfp">Call for Papers</a></li>
+      <li><a href="#dates" onclick="show('dates')" id="nav-dates">Dates</a></li>
+      <li><a href="#committee" onclick="show('committee')" id="nav-committee">Committee</a></li>
+      <li><a href="#review" onclick="show('review')" id="nav-review">Review</a></li>
+      <li><a href="#registration" onclick="show('registration')" id="nav-registration">Registration</a></li>
+      <li><a href="#policies" onclick="show('policies')" id="nav-policies">Policies</a></li>
+      <li><a href="#contact" onclick="show('contact')" id="nav-contact">Contact</a></li>
     </ul>
 
     <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -1482,12 +1482,12 @@ footer .footer-links a:hover { color: var(--gold); }
   <div class="footer-logo">प्रसार</div>
   <p class="gold">PRASIT 2027 — Premier Research &amp; Academic Symposium in Information Technology</p>
   <div class="footer-links">
-    <a onclick="show('home')">Home</a>
-    <a onclick="show('cfp')">Call for Papers</a>
-    <a onclick="show('dates')">Dates</a>
-    <a onclick="show('registration')">Registration</a>
-    <a onclick="show('policies')">Policies</a>
-    <a onclick="show('contact')">Contact</a>
+    <a href="#home" onclick="show('home')">Home</a>
+    <a href="#cfp" onclick="show('cfp')">Call for Papers</a>
+    <a href="#dates" onclick="show('dates')">Dates</a>
+    <a href="#registration" onclick="show('registration')">Registration</a>
+    <a href="#policies" onclick="show('policies')">Policies</a>
+    <a href="#contact" onclick="show('contact')">Contact</a>
   </div>
   <p>prasit.org &nbsp;|&nbsp; contact@prasit.org</p>
   <p style="margin-top:6px;font-size:10.5px;color:#555">Organized by PRASIT Research Foundation · Durgapur, West Bengal, India</p>
@@ -1495,7 +1495,10 @@ footer .footer-links a:hover { color: var(--gold); }
 </footer>
 
 <script>
-function show(id) {
+const VALID_PAGES = ['home','about','cfp','dates','committee','review','registration','policies','contact'];
+
+function show(id, updateHash = true) {
+  if (!VALID_PAGES.includes(id)) id = 'home';
   // Hide all pages
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   // Deactivate all nav links (desktop + mobile)
@@ -1517,8 +1520,23 @@ function show(id) {
     heading.setAttribute('tabindex', '-1');
     heading.focus();
   }
+  // Reflect the current page in the URL so it can be shared/bookmarked and
+  // browser back/forward works, without triggering our own hashchange listener twice
+  if (updateHash && location.hash !== '#' + id) {
+    history.pushState(null, '', '#' + id);
+  }
   // Prevent default
   return false;
+}
+
+// Handle browser back/forward and directly-visited/shared links like site.com/#cfp
+function routeFromHash() {
+  const id = location.hash.replace('#', '') || 'home';
+  show(id, false);
+}
+window.addEventListener('hashchange', routeFromHash);
+if (location.hash) {
+  routeFromHash();
 }
 
 // Hamburger toggle
