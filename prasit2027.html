@@ -414,14 +414,14 @@ nav {
 ══════════════════════════════════════ */
 .table-wrap { overflow-x: auto; margin-top: 20px; -webkit-overflow-scrolling: touch; }
 
-.dates-table, .fee-table {
+.dates-table, .fee-table, .tpc-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
   min-width: 480px;
 }
 
-.dates-table th, .fee-table th {
+.dates-table th, .fee-table th, .tpc-table th {
   background: var(--maroon);
   color: var(--cream);
   padding: 12px 18px;
@@ -430,16 +430,18 @@ nav {
   letter-spacing: 0.4px;
 }
 
-.dates-table td, .fee-table td {
+.dates-table td, .fee-table td, .tpc-table td {
   padding: 12px 18px;
   border-bottom: 1px solid #ede6de;
 }
 
 .dates-table tr:nth-child(even) td,
-.fee-table tr:nth-child(even) td { background: var(--bg-card); }
+.fee-table tr:nth-child(even) td,
+.tpc-table tr:nth-child(even) td { background: var(--bg-card); }
 
 .dates-table tr:hover td,
-.fee-table tr:hover td { background: var(--gold-pale); }
+.fee-table tr:hover td,
+.tpc-table tr:hover td { background: var(--gold-pale); }
 
 .deadline { color: var(--maroon); font-weight: 600; }
 
@@ -606,7 +608,7 @@ nav {
   content: '+';
   font-size: 20px;
   font-weight: 400;
-  color: var(--gold);
+  color: var(--maroon-light);
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
@@ -1256,37 +1258,60 @@ footer .footer-links a:hover { color: var(--gold); }
     <div class="section-sub">The team responsible for conference operations</div>
     <div class="committee-grid">
       <div class="member">
-        <div class="member-avatar">AM</div>
-        <h4>Amit (Founder &amp; General Chair)</h4>
-        <div class="role">Conference Director</div>
+        <div class="member-avatar">AR</div>
+        <h4>Amit Raj</h4>
+        <div class="role">Conference Chair</div>
         <div class="affil">PRASIT Research Foundation, Durgapur, West Bengal</div>
       </div>
       <div class="member">
-        <div class="member-avatar">TC</div>
-        <h4>TPC Chair</h4>
-        <div class="role">Position open — inviting applicants</div>
-        <div class="affil">PhD in CS/IT required · Active publication record</div>
+        <div class="member-avatar">DK</div>
+        <h4>Dipti Kumari</h4>
+        <div class="role">Technical Program Chair</div>
+        <div class="affil">PRASIT Research Foundation</div>
       </div>
       <div class="member">
-        <div class="member-avatar">PC</div>
-        <h4>Publicity Chair</h4>
-        <div class="role">Position open — inviting applicants</div>
-        <div class="affil">Faculty or active researcher</div>
+        <div class="member-avatar">RR</div>
+        <h4>Rohit Raj</h4>
+        <div class="role">Publication Chair</div>
+        <div class="affil">PRASIT Research Foundation</div>
       </div>
       <div class="member">
-        <div class="member-avatar">WC</div>
-        <h4>Web &amp; Design Chair</h4>
-        <div class="role">Position open — inviting applicants</div>
-        <div class="affil">Technical background preferred</div>
+        <div class="member-avatar">VS</div>
+        <h4>Vishwajeet Singh</h4>
+        <div class="role">Web &amp; Design Chair</div>
+        <div class="affil">PRASIT Research Foundation</div>
       </div>
     </div>
-    <div class="notice">We are actively building the organizing and technical program committee. Faculty members and researchers interested in joining PRASIT 2027 are welcome to write to <a href="mailto:contact@prasit.org" style="color:var(--maroon);font-weight:600">contact@prasit.org</a> with their CV and a brief statement of interest. Committee positions are voluntary and unpaid. Confirmed members will be listed here with full affiliation details.</div>
   </div>
 
   <div class="section">
     <div class="section-title">Technical program committee</div>
-    <div class="section-sub">Reviewers with PhD and active publication record — being assembled for September 2026</div>
-    <div class="notice">The TPC will be published here once confirmed, with each member's full name, institutional affiliation, and research area listed. We target 25+ reviewers across all 6 tracks. Reviewer recruitment will begin in July 2026. If you hold a PhD in CS/IT and have publications in the last 3 years, you are welcome to express interest at <a href="mailto:tpc@prasit.org" style="color:var(--maroon);font-weight:600">tpc@prasit.org</a>.</div>
+    <div class="section-sub">Reviewers drawn from academia and industry across all 6 tracks</div>
+    <div class="table-wrap">
+      <table class="tpc-table">
+        <thead>
+          <tr><th>Name</th><th>Affiliation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ms. Sharmistha Dey</td><td>Techno India University, Kolkata</td></tr>
+          <tr><td>Dr. J. Janet</td><td>VIT, Bhopal</td></tr>
+          <tr><td>Mr. Joshua David</td><td>Mphasis</td></tr>
+          <tr><td>Dr. Deb Prasad Dey</td><td>NIT, Jamshedpur</td></tr>
+          <tr><td>Dr. TukTuki Rakshit Gosh</td><td>Jadavpur University</td></tr>
+          <tr><td>Mr. Anurag Harsh</td><td>Oracle</td></tr>
+          <tr><td>Ms. Moumita Sengupta</td><td>BITS Pilani</td></tr>
+          <tr><td>Dr. Sita Devi Bhartula</td><td>AVIT, Chennai</td></tr>
+          <tr><td>Ms. Rajni Jadhav</td><td>Amdocs</td></tr>
+          <tr><td>Dr. Tamil Selvi</td><td>St. Joseph</td></tr>
+          <tr><td>Ms. Anusha Reddy</td><td>VIT, Amaravati</td></tr>
+          <tr><td>Mr. Arvind Goyal</td><td>Infosys</td></tr>
+          <tr><td>Ms. Deepika Vadevalli</td><td>State Street</td></tr>
+          <tr><td>Mr. Tapan Dey</td><td>TCS</td></tr>
+          <tr><td>Mr. Ramesh Singla</td><td>Walmart</td></tr>
+          <tr><td>Ms. Rajneesh Malviya</td><td>Amazon</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <div class="section">
