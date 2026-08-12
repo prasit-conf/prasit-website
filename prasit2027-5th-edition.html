@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRASIT 2027 — Premier Research & Academic Symposium in IT</title>
+<meta name="description" content="PRASIT 2027 is a double-blind peer-reviewed CS/IT research symposium for BTech, MTech and PhD researchers. Online · 15–16 March 2027 · CrossRef DOI · Open access proceedings. Organized by PRASIT Technologies, Chennai, India.">
+<link rel="canonical" href="https://prasit.in/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PRASIT 2027 — Premier Research & Academic Symposium in IT">
+<meta property="og:description" content="Double-blind peer-reviewed CS/IT research symposium for BTech, MTech and PhD researchers. Online · 15–16 March 2027 · CrossRef DOI · Open access proceedings.">
+<meta property="og:url" content="https://prasit.in/">
+<meta property="og:site_name" content="PRASIT 2027">
+<meta property="og:image" content="https://prasit.in/favicon-192.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PRASIT 2027 — Premier Research & Academic Symposium in IT">
+<meta name="twitter:description" content="Double-blind peer-reviewed CS/IT research symposium for BTech, MTech and PhD researchers. Online · 15–16 March 2027 · CrossRef DOI · Open access proceedings.">
+<meta name="twitter:image" content="https://prasit.in/favicon-192.png">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --maroon: #5C1212;
+  --maroon-mid: #7B1D1D;
+  --maroon-light: #9B2626;
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale: #FDF3DC;
+  --cream: #F8F4F0;
+  --cream-mid: #EDE6DE;
+  --text: #1a1a1a;
+  --text-mid: #444;
+  --text-light: #686868;
+  --border: #d4c9c9;
+  --bg-card: #faf7f5;
+  --nav-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream-mid); }
+::-webkit-scrollbar-thumb { background: var(--maroon); border-radius: 2px; }
+
+/* ══════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════ */
+nav {
+  background: var(--maroon);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  height: var(--nav-h);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.nav-logo {
+  height: 44px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand-text { line-height: 1.2; }
+.brand-name {
+  color: var(--cream);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.brand-sub {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: rgba(248,244,240,0.85);
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  padding: 8px 9px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.15s;
+  white-space: nowrap;
+  display: block;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: rgba(201,168,76,0.15);
+  color: var(--gold);
+}
+
+/* More dropdown */
+.nav-dropdown { position: relative; }
+
+.nav-more-btn {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(248,244,240,0.85);
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  padding: 8px 9px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.15s;
+}
+.nav-more-btn:hover,
+.nav-more-btn.active,
+.nav-more-btn[aria-expanded="true"] {
+  background: rgba(201,168,76,0.15);
+  color: var(--gold);
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 190px;
+  background: var(--maroon);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  z-index: 1100;
+  list-style: none;
+}
+.dropdown-menu.open { display: flex; }
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: rgba(248,244,240,0.85);
+  text-decoration: none;
+  border-radius: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
+  background: rgba(201,168,76,0.15);
+  color: var(--gold);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: all 0.3s;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--maroon);
+  z-index: 999;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 16px 0;
+}
+
+.mobile-menu ul li a {
+  display: block;
+  padding: 16px 28px;
+  color: var(--cream);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.15s;
+}
+
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active {
+  background: rgba(201,168,76,0.12);
+  color: var(--gold);
+  padding-left: 36px;
+}
+
+/* ══════════════════════════════════════
+   PAGES
+══════════════════════════════════════ */
+.page { display: none; animation: fadeIn 0.25s ease; }
+.page.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, var(--maroon) 0%, #3D0A0A 100%);
+  padding: 72px 24px 56px;
+  text-align: center;
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--maroon);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  padding: 5px 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-sanskrit {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--cream);
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: rgba(212,181,181,0.9);
+  font-size: clamp(12px, 2.5vw, 14px);
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+}
+
+.hero-sm {
+  padding: 36px 24px 32px;
+}
+
+/* Key dates strip */
+.hero-dates {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-date {
+  background: rgba(123,29,29,0.7);
+  border: 1px solid rgba(201,168,76,0.5);
+  padding: 14px 20px;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  min-width: 140px;
+}
+
+.hero-date .label {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.hero-date .value {
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.trust-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+  position: relative;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,0,0,0.15);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--gold-light);
+}
+
+.trust-icon {
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .trust-strip { gap: 8px; }
+  .trust-badge { font-size: 10.5px; padding: 6px 12px; }
+  .cards[style*="repeat(2"] { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* ══════════════════════════════════════
+   LAYOUT WRAPPERS
+══════════════════════════════════════ */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 48px 24px;
+  border-bottom: 1px solid #ede6de;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  color: var(--maroon);
+  font-weight: 700;
+  margin-bottom: 4px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
+.section-sub {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 6px;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+/* ══════════════════════════════════════
+   CARDS
+══════════════════════════════════════ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  padding: 24px 20px;
+  background: var(--bg-card);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(92,18,18,0.1);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: var(--maroon);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 12.5px;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+/* ══════════════════════════════════════
+   TRACKS
+══════════════════════════════════════ */
+.tracks { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+
+.track {
+  border-left: 3px solid var(--gold);
+  padding: 14px 18px;
+  background: var(--bg-card);
+  transition: border-color 0.2s;
+}
+
+.track:hover { border-color: var(--maroon); }
+
+.track h3 {
+  font-size: 14px;
+  color: var(--maroon);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.track p { font-size: 12.5px; color: var(--text-mid); line-height: 1.7; }
+
+/* ══════════════════════════════════════
+   TABLES
+══════════════════════════════════════ */
+.table-wrap { overflow-x: auto; margin-top: 20px; -webkit-overflow-scrolling: touch; }
+
+.dates-table, .fee-table, .tpc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 480px;
+}
+
+.dates-table th, .fee-table th, .tpc-table th {
+  background: var(--maroon);
+  color: var(--cream);
+  padding: 12px 18px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.dates-table td, .fee-table td, .tpc-table td {
+  padding: 12px 18px;
+  border-bottom: 1px solid #ede6de;
+}
+
+.dates-table tr:nth-child(even) td,
+.fee-table tr:nth-child(even) td,
+.tpc-table tr:nth-child(even) td { background: var(--bg-card); }
+
+.dates-table tr:hover td,
+.fee-table tr:hover td,
+.tpc-table tr:hover td { background: var(--gold-pale); }
+
+.deadline { color: var(--maroon); font-weight: 600; }
+
+.fee-amount { font-weight: 700; color: var(--maroon); font-size: 15px; }
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.badge-gold { background: var(--gold-pale); color: #7A5200; border: 1px solid var(--gold); }
+.badge-open { background: #EAF5E9; color: #1a5c18; border: 1px solid #4caf50; }
+.badge-soon { background: #FFF3E0; color: #7a3e00; border: 1px solid #ff9800; }
+
+/* ══════════════════════════════════════
+   ABOUT BLOCK
+══════════════════════════════════════ */
+.about-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 24px;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 13.5px;
+  color: #333;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.about-sanskrit {
+  background: linear-gradient(135deg, var(--maroon) 0%, #3D0A0A 100%);
+  padding: 32px 24px;
+  text-align: center;
+  position: sticky;
+  top: calc(var(--nav-h) + 20px);
+}
+
+.about-sanskrit .deva {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.about-sanskrit p {
+  color: rgba(212,181,181,0.9);
+  font-size: 12.5px;
+  line-height: 1.75;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.stat {
+  background: var(--maroon);
+  padding: 20px 12px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stat:hover { transform: translateY(-3px); }
+
+.stat .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat .lbl {
+  font-size: 11px;
+  color: rgba(212,181,181,0.8);
+  margin-top: 6px;
+  letter-spacing: 0.4px;
+}
+
+/* ══════════════════════════════════════
+   CONFERENCE AT A GLANCE
+══════════════════════════════════════ */
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.glance-item {
+  background: var(--maroon);
+  padding: 20px 12px;
+  text-align: center;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.glance-item:hover { transform: translateY(-3px); }
+
+.glance-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.glance-lbl {
+  font-size: 11px;
+  color: rgba(212,181,181,0.85);
+  margin-top: 6px;
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 640px) {
+  .glance-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ══════════════════════════════════════
+   CFP SUBMISSION FORMAT
+══════════════════════════════════════ */
+.sub-format {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.sub-format h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--maroon);
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+.sub-format ul { list-style: none; }
+
+.sub-format ul li {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--cream-mid);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.sub-format ul li:last-child { border: none; }
+.sub-format ul li span { color: var(--maroon); font-weight: 600; }
+
+/* ══════════════════════════════════════
+   NOTICE
+══════════════════════════════════════ */
+.notice {
+  background: #FFFBF2;
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  margin-top: 20px;
+  font-size: 12.5px;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+/* ══════════════════════════════════════
+   FAQ
+══════════════════════════════════════ */
+.faq-list { margin-top: 16px; }
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 20px;
+  margin-bottom: 10px;
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 14px 0;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--maroon);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--maroon-light);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 2px;
+}
+.faq-item p {
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.75;
+  padding-bottom: 16px;
+}
+
+/* ══════════════════════════════════════
+   COMMITTEE
+══════════════════════════════════════ */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.member {
+  border: 1px solid var(--border);
+  padding: 20px 16px;
+  background: var(--bg-card);
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.member:hover { box-shadow: 0 4px 16px rgba(92,18,18,0.1); }
+
+.member-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.member h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.member .role { font-size: 11px; color: var(--maroon); font-weight: 600; margin-bottom: 2px; }
+.member .affil { font-size: 11px; color: var(--text-light); }
+
+/* ══════════════════════════════════════
+   TPC CARD GRID
+══════════════════════════════════════ */
+.tpc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.tpc-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 12px;
+  text-align: center;
+  background: var(--bg-card);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.tpc-card:hover {
+  box-shadow: 0 6px 18px rgba(92,18,18,0.12);
+  transform: translateY(-2px);
+}
+
+.tpc-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--maroon);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tpc-card h4 { font-size: 12.5px; font-weight: 600; margin-bottom: 4px; line-height: 1.35; }
+.tpc-card .affil { font-size: 11px; color: var(--text-light); line-height: 1.4; }
+
+/* ══════════════════════════════════════
+   KEYNOTE SPEAKERS
+══════════════════════════════════════ */
+.keynote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+  max-width: 560px;
+}
+
+.keynote-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  background: var(--bg-card);
+}
+
+.keynote-photo-wrap {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--gold);
+  position: relative;
+}
+
+.keynote-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.keynote-photo-fallback {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--maroon);
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.keynote-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.keynote-card .role { font-size: 11.5px; color: var(--maroon); font-weight: 600; margin-bottom: 2px; }
+.keynote-card .affil { font-size: 12px; color: var(--text-light); }
+
+/* ══════════════════════════════════════
+   REVIEW STEPS
+══════════════════════════════════════ */
+.review-steps { margin-top: 24px; display: flex; flex-direction: column; gap: 0; }
+
+.step {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--cream-mid);
+  align-items: flex-start;
+}
+
+.step:last-child { border: none; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+.why-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.why-item h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--maroon); }
+.why-item p { font-size: 12.5px; color: var(--text-mid); line-height: 1.6; }
+
+.step-num {
+  min-width: 40px;
+  height: 40px;
+  background: var(--maroon);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-body h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.step-body p { font-size: 12.5px; color: var(--text-mid); line-height: 1.75; }
+
+/* ══════════════════════════════════════
+   CONTACT
+══════════════════════════════════════ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact-card {
+  border: 1px solid var(--border);
+  padding: 22px 20px;
+  background: var(--bg-card);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.contact-card:hover {
+  box-shadow: 0 4px 16px rgba(92,18,18,0.1);
+  transform: translateY(-2px);
+}
+
+.contact-card h4 {
+  font-size: 13px;
+  color: var(--maroon);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-card h4 .icon {
+  font-size: 16px;
+}
+
+.contact-card p {
+  font-size: 12.5px;
+  color: var(--text-mid);
+  line-height: 1.85;
+}
+
+.contact-card a {
+  color: var(--maroon);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--maroon-mid);
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════
+   BUTTONS
+══════════════════════════════════════ */
+.btn {
+  display: inline-block;
+  background: var(--maroon);
+  color: var(--cream);
+  padding: 11px 26px;
+  font-size: 11.5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: background 0.15s;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+.btn:hover { background: var(--maroon-mid); }
+.btn-gold { background: var(--gold); color: var(--maroon); }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+
+.btn-lg { padding: 15px 34px; font-size: 13px; letter-spacing: 1.2px; border-radius: 4px; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold-light);
+  border: 1.5px solid var(--gold);
+}
+.btn-outline:hover { background: rgba(201,168,76,0.12); }
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-countdown {
+  margin-top: 20px;
+  padding: 18px 28px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.countdown-label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.countdown-clock {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 44px;
+}
+
+.countdown-unit span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.countdown-unit label {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(248,244,240,0.6);
+  margin-top: 4px;
+}
+
+.countdown-sub {
+  margin-top: 10px;
+  font-size: 11px;
+  color: rgba(248,244,240,0.55);
+}
+
+.hero-fineprint {
+  margin-top: 18px;
+  font-size: 12px;
+  color: rgba(248,244,240,0.65);
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════
+   SKIP LINK (accessibility)
+══════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  background: var(--gold);
+  color: var(--maroon);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 6px;
+  z-index: 2000;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+}
+main:focus { outline: none; }
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: #111;
+  padding: 44px 24px 28px;
+}
+
+footer .footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+  font-size: 24px;
+}
+
+footer p {
+  color: #8f8f8f;
+  font-size: 11.5px;
+  line-height: 2;
+}
+
+footer .gold { color: var(--gold); }
+
+.footer-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.footer-col h4 {
+  color: var(--cream);
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: #8f8f8f;
+  font-size: 11.5px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+/* Tablet - hide some nav items */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: block; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 60px; }
+
+  .hero { padding: 48px 20px 40px; }
+
+  .about-block { grid-template-columns: 1fr; }
+  .about-sanskrit { position: static; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .section { padding: 36px 20px; }
+
+  .hero-date { min-width: 120px; padding: 12px 14px; }
+}
+
+@media (max-width: 480px) {
+  .hero { padding: 40px 16px 32px; }
+
+  .hero-dates { gap: 10px; }
+  .hero-date { min-width: calc(50% - 5px); }
+
+  .section { padding: 28px 16px; }
+
+  .cards { grid-template-columns: 1fr; }
+
+  .committee-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .sub-format ul li { flex-direction: column; gap: 2px; }
+
+  .btn-group { flex-direction: column; }
+  .btn { text-align: center; }
+
+  .step { gap: 14px; }
+  .step-num { min-width: 34px; height: 34px; font-size: 15px; }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .hero { padding: 96px 32px 72px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "PRASIT 2027 — Premier Research & Academic Symposium in Information Technology",
+  "description": "Double-blind peer-reviewed CS/IT research symposium for BTech, MTech and PhD researchers. CrossRef DOI, open access proceedings.",
+  "startDate": "2027-03-15",
+  "endDate": "2027-03-16",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "VirtualLocation",
+    "url": "https://prasit.in/"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "PRASIT Technologies",
+    "url": "https://prasit.in/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    }
+  },
+  "image": "https://prasit.in/favicon-192.png",
+  "url": "https://prasit.in/"
+}
+</script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ── NAVIGATION ── -->
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <svg class="nav-logo" viewBox="60 45 560 165" xmlns="http://www.w3.org/2000/svg" style="height:44px;width:auto;display:block;" role="img" aria-labelledby="navLogoTitle">
+        <title id="navLogoTitle">PRASIT 2027 logo — Deepam lamp with Sanskrit word Prasāra</title>
+        <ellipse cx="340" cy="155" rx="38" ry="8" fill="#C9A84C" opacity="0.9"/>
+        <rect x="334" y="115" width="12" height="42" rx="4" fill="#C9A84C"/>
+        <path d="M310 118 Q320 100 340 96 Q360 100 370 118 Q362 128 340 130 Q318 128 310 118Z" fill="#C9A84C"/>
+        <path d="M340 58 Q352 72 350 88 Q344 98 340 96 Q336 98 330 88 Q328 72 340 58Z" fill="#E8C96D"/>
+        <path d="M340 68 Q346 78 345 88 Q342 94 340 93 Q338 94 335 88 Q334 78 340 68Z" fill="#FFF3CD"/>
+        <circle cx="340" cy="66" r="3" fill="#FFFACD" opacity="0.9"/>
+        <path d="M295 108 Q295 55 340 50 Q385 55 385 108" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-opacity="0.7"/>
+        <circle cx="295" cy="108" r="3" fill="#C9A84C" opacity="0.7"/>
+        <circle cx="385" cy="108" r="3" fill="#C9A84C" opacity="0.7"/>
+        <line x1="310" y1="50" x2="370" y2="50" stroke="#C9A84C" stroke-width="2" stroke-opacity="0.6"/>
+        <line x1="288" y1="96" x2="276" y2="82" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="284" y1="108" x2="270" y2="108" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="392" y1="96" x2="404" y2="82" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.5"/>
+        <line x1="396" y1="108" x2="410" y2="108" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="340" y="185" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="700" letter-spacing="10" fill="#E8C96D">PRASIT</text>
+        <text x="340" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.5" fill="#C9A84C" opacity="0.8">PREMIER RESEARCH &amp; ACADEMIC SYMPOSIUM IN INFORMATION TECHNOLOGY</text>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">PRASIT 2027</div>
+        <div class="brand-sub">Premier Research &amp; Academic Symposium in IT</div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home" onclick="show('home')" id="nav-home" class="active">Home</a></li>
+      <li><a href="#about" onclick="show('about')" id="nav-about">About</a></li>
+      <li><a href="#cfp" onclick="show('cfp')" id="nav-cfp">Call for Papers</a></li>
+      <li><a href="#dates" onclick="show('dates')" id="nav-dates">Important Dates</a></li>
+      <li><a href="#committee" onclick="show('committee')" id="nav-committee">Committee</a></li>
+      <li><a href="#programme" onclick="show('programme')" id="nav-programme">Programme</a></li>
+      <li><a href="#registration" onclick="show('registration')" id="nav-registration">Registration</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-more-btn" id="navMoreBtn" aria-haspopup="true" aria-expanded="false" onclick="toggleMoreMenu(event)">More <span aria-hidden="true">▾</span></button>
+        <ul class="dropdown-menu" id="navMoreMenu">
+          <li><a href="#review" onclick="show('review');closeMoreMenu()" id="nav-review">Review Process</a></li>
+          <li><a href="#publication" onclick="show('publication');closeMoreMenu()" id="nav-publication">Publication</a></li>
+          <li><a href="#policies" onclick="show('policies');closeMoreMenu()" id="nav-policies">Policies</a></li>
+          <li><a href="#faq" onclick="show('faq');closeMoreMenu()" id="nav-faq">FAQ</a></li>
+          <li><a href="#contact" onclick="show('contact');closeMoreMenu()" id="nav-contact">Contact</a></li>
+          <li><a href="#privacy" onclick="show('privacy');closeMoreMenu()" id="nav-privacy">Privacy Policy</a></li>
+          <li><a href="#terms" onclick="show('terms');closeMoreMenu()" id="nav-terms">Terms &amp; Conditions</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#home" onclick="show('home');closeMobile()" id="mnav-home" class="active">Home</a></li>
+    <li><a href="#about" onclick="show('about');closeMobile()" id="mnav-about">About</a></li>
+    <li><a href="#cfp" onclick="show('cfp');closeMobile()" id="mnav-cfp">Call for Papers</a></li>
+    <li><a href="#dates" onclick="show('dates');closeMobile()" id="mnav-dates">Important Dates</a></li>
+    <li><a href="#committee" onclick="show('committee');closeMobile()" id="mnav-committee">Committee</a></li>
+    <li><a href="#review" onclick="show('review');closeMobile()" id="mnav-review">Review Process</a></li>
+    <li><a href="#publication" onclick="show('publication');closeMobile()" id="mnav-publication">Publication</a></li>
+    <li><a href="#faq" onclick="show('faq');closeMobile()" id="mnav-faq">FAQ</a></li>
+    <li><a href="#programme" onclick="show('programme');closeMobile()" id="mnav-programme">Programme</a></li>
+    <li><a href="#registration" onclick="show('registration');closeMobile()" id="mnav-registration">Registration</a></li>
+    <li><a href="#policies" onclick="show('policies');closeMobile()" id="mnav-policies">Policies</a></li>
+    <li><a href="#contact" onclick="show('contact');closeMobile()" id="mnav-contact">Contact</a></li>
+    <li><a href="#privacy" onclick="show('privacy');closeMobile()" id="mnav-privacy">Privacy Policy</a></li>
+    <li><a href="#terms" onclick="show('terms');closeMobile()" id="mnav-terms">Terms &amp; Conditions</a></li>
+  </ul>
+</div>
+
+<main id="main-content" tabindex="-1">
+
+<!-- ══════════════════════════════════════
+     HOME PAGE
+══════════════════════════════════════ -->
+<div id="home" class="page active">
+  <div class="hero">
+    <div class="hero-tag">Fifth Edition — March 2027 · Online · India</div>
+    <div class="hero-sanskrit">प्रसार</div>
+    <h1>PRASIT 2027</h1>
+    <p>Premier Research &amp; Academic Symposium in Information Technology<br>15–16 March 2027 · Online · India</p>
+
+    <div class="hero-cta">
+      <a href="https://prasit-portal.vercel.app/auth/register" class="btn btn-gold btn-lg" target="_blank" rel="noopener">Submit Your Paper</a>
+      <a href="#cfp" class="btn btn-outline btn-lg" onclick="show('cfp')">View Call for Papers</a>
+    </div>
+
+    <div class="hero-countdown" id="heroCountdown">
+      <div class="countdown-label" id="cdLabel">Paper Submission Deadline</div>
+      <div class="countdown-clock" id="cdClock">
+        <div class="countdown-unit"><span id="cdDays">--</span><label>Days</label></div>
+        <div class="countdown-unit"><span id="cdHours">--</span><label>Hours</label></div>
+        <div class="countdown-unit"><span id="cdMins">--</span><label>Minutes</label></div>
+      </div>
+      <div class="countdown-sub" id="cdSub">30 November 2026 · 23:59 IST</div>
+    </div>
+
+    <p>
+
+    <div class="hero-dates">
+      <div class="hero-date">
+        <div class="label">Paper Submission</div>
+        <div class="value">30 Nov 2026</div>
+      </div>
+      <div class="hero-date">
+        <div class="label">Review Notification</div>
+        <div class="value">31 Jan 2027</div>
+      </div>
+      <div class="hero-date">
+        <div class="label">Camera Ready</div>
+        <div class="value">20 Feb 2027</div>
+      </div>
+      <div class="hero-date">
+        <div class="label">Conference Date</div>
+        <div class="value">15–16 Mar 2027</div>
+      </div>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">👁️</span>Double Blind Review</div>
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">👥</span>3 Reviewers Per Paper</div>
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">📜</span>CrossRef DOI</div>
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">📜</span>Scopus Indexed</div>
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">🎓</span>Google Scholar Submission</div>
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">🔓</span>Open Access</div>
+      <div class="trust-badge"><span class="trust-icon" aria-hidden="true">🌐</span>International Conference</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">PRASIT 2027 at a glance</div>
+    <div class="glance-grid">
+      <div class="glance-item"><div class="glance-val">15–16 Mar</div><div class="glance-lbl">Conference</div></div>
+      <div class="glance-item"><div class="glance-val">30 Nov 2026</div><div class="glance-lbl">Submission Deadline</div></div>
+      <div class="glance-item"><div class="glance-val">Online</div><div class="glance-lbl">Conference Format</div></div>
+      <div class="glance-item"><div class="glance-val">6</div><div class="glance-lbl">Research Tracks</div></div>
+      <div class="glance-item"><div class="glance-val">3</div><div class="glance-lbl">Reviewers Per Paper</div></div>
+      <div class="glance-item"><div class="glance-val">Open Access</div><div class="glance-lbl">Proceedings</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What PRASIT offers</div>
+    <div class="section-sub">Commitments to authors and reviewers</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🛡️</div>
+        <h3>Double-blind peer review</h3>
+        <p>Every paper receives 3 independent reviews. Minimum 4-week review cycle. Reviewer feedback sent to all authors — accepted and rejected.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📊</div>
+        <h3>Target acceptance rate: 25–35%</h3>
+        <p>A quality threshold, not a quota. If submissions are weak, acceptance will be lower. Rejection includes constructive reviewer comments.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📜</div>
+        <h3>CrossRef DOI</h3>
+        <p>Each accepted paper receives a permanent CrossRef DOI, making it globally findable and citable. Proceedings submitted for Google Scholar indexing.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">💰</div>
+        <h3>Flat fee: ₹3,900 / $95</h3>
+        <p>Single fee for all Indian categories. Fee waivers available for students from economically weaker backgrounds on request.</p>
+      </div>
+    </div>
+    <div class="notice"><strong>Indexing note:</strong> PRASIT 2027 is the fifth edition, and proceedings from earlier editions are indexed in Google Scholar. On approval, the proceedings series will be submitted to the Web of Science Book Citation Index (BkCI) and to SCOPUS for evaluation and indexing (T&amp;C)*. Submission does not guarantee acceptance by either body, and we do <strong>not</strong> claim IEEE Xplore indexing. Authors requiring confirmed Scopus/WoS indexing for university mandates should factor this in before submitting.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Why submit?</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <h3>Rigorous Review</h3>
+        <p>Three independent reviewers per paper.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <h3>Constructive Feedback</h3>
+        <p>Reviewer comments provided to authors.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <h3>DOI Publication</h3>
+        <p>Accepted papers receive DOI registration.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <h3>Open Access</h3>
+        <p>Proceedings publicly accessible.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">05</div>
+        <h3>Student Friendly</h3>
+        <p>Designed to support emerging researchers.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">06</div>
+        <h3>Transparent Policies</h3>
+        <p>Review, ethics, withdrawal, and publication policies are public.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">07</div>
+        <h3>Scopus Indexed</h3>
+        <p>Proceedings targeted for Scopus indexing, subject to evaluation and approval.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Conference tracks</div>
+    <div class="section-sub">PRASIT 2027 invites original research in the following areas</div>
+    <div class="tracks">
+      <div class="track"><h3>Track 1 — Artificial Intelligence &amp; Machine Learning</h3><p>Deep learning, NLP, computer vision, reinforcement learning, explainable AI, AI ethics</p></div>
+      <div class="track"><h3>Track 2 — Cybersecurity &amp; Blockchain</h3><p>Network security, cryptography, blockchain applications, privacy, threat detection</p></div>
+      <div class="track"><h3>Track 3 — Cloud Computing &amp; IoT</h3><p>Cloud architecture, edge computing, IoT systems, smart devices, fog computing</p></div>
+      <div class="track"><h3>Track 4 — Data Science &amp; Big Data</h3><p>Data analytics, visualization, knowledge graphs, distributed data processing</p></div>
+      <div class="track"><h3>Track 5 — Software Engineering</h3><p>Agile methods, DevOps, software testing, HCI, UX research, requirement engineering</p></div>
+      <div class="track"><h3>Track 6 — Computer Networks &amp; Communication</h3><p>Wireless networks, 5G/6G, network protocols, SDN, network optimization</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Publication &amp; DOI</div>
+    <div class="section-sub">What happens to your paper once it's accepted</div>
+    <div class="cards" style="grid-template-columns:repeat(auto-fit, minmax(200px,1fr))">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📜</div>
+        <h3>CrossRef DOI</h3>
+        <p>Every accepted paper receives a permanent, citable DOI upon publication.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🔓</div>
+        <h3>Open access</h3>
+        <p>Proceedings are freely accessible online — no paywall, no subscription.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🎓</div>
+        <h3>Google Scholar</h3>
+        <p>Proceedings submitted for Google Scholar indexing after publication.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🎓</div>
+        <h3>Scopus Indexed</h3>
+        <p>Proceedings targeted for Scopus indexing, subject to evaluation and approval.</p>
+      </div>
+    </div>
+    <div class="notice" style="text-align:center">Full details — copyright, licensing, ISBN, and citation format — on the <a href="#publication" onclick="show('publication')" style="color:var(--maroon);font-weight:600">Publication page →</a></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Review process</div>
+    <div class="section-sub">Transparent, structured, and the same for every paper</div>
+    <div class="tracks">
+      <div class="track"><h3>1. Desk check</h3><p>Format, scope, and similarity screening — 1 week</p></div>
+      <div class="track"><h3>2. Independent review</h3><p>3 reviewers score against a weighted rubric — 4 weeks</p></div>
+      <div class="track"><h3>3. Decision &amp; feedback</h3><p>All authors — accepted or rejected — receive full reviewer comments</p></div>
+    </div>
+    <div class="notice" style="text-align:center">See the full six-step process and evaluation criteria on the <a href="#review" onclick="show('review')" style="color:var(--maroon);font-weight:600">Review Process page →</a></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Keynote speakers</div>
+    <div class="keynote-grid">
+      <div class="keynote-card">
+        <div class="keynote-photo-wrap">
+          <img class="keynote-photo" src="assets/keynote-sanjay-mittal.jpg" alt="Photo of Sanjay Mittal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="keynote-photo-fallback">SM</div>
+        </div>
+        <h4>Sanjay Mittal</h4>
+        <div class="role">Keynote Speaker</div>
+        <div class="affil">Professor, IIT Madras</div>
+      </div>
+      <div class="keynote-card">
+        <div class="keynote-photo-wrap">
+          <img class="keynote-photo" src="assets/keynote-surya-kumar.jpg" alt="Photo of Surya Kumar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="keynote-photo-fallback">SK</div>
+        </div>
+        <h4>Surya Kumar</h4>
+        <div class="role">Keynote Speaker</div>
+        <div class="affil">IIT Roorkee</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Committee</div>
+    <div class="section-sub">16 technical program committee members across academia and industry</div>
+    <div class="committee-grid">
+      <div class="member"><div class="member-avatar">AR</div><h4>Amit Raj</h4><div class="role">Conference Chair</div></div>
+      <div class="member"><div class="member-avatar">DK</div><h4>Prajakta Raghunathan</h4><div class="role">Technical Program Chair</div></div>
+      <div class="member"><div class="member-avatar">RR</div><h4>Virendra Patil</h4><div class="role">Publication Chair</div></div>
+      <div class="member"><div class="member-avatar">VS</div><h4>Sanjay Deshmukh</h4><div class="role">Web &amp; Design Chair</div></div>
+    </div>
+    <div class="notice" style="text-align:center">Meet the full 16-member technical program committee on the <a href="#committee" onclick="show('committee')" style="color:var(--maroon);font-weight:600">Committee page →</a></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Registration</div>
+    <div class="section-sub">Paid only after your paper is accepted</div>
+    <div class="table-wrap">
+      <table class="fee-table">
+        <thead><tr><th>Category</th><th>Fee</th></tr></thead>
+        <tbody>
+          <tr><td>Indian participants (student / PhD / faculty / industry)</td><td class="fee-amount">₹3,900</td></tr>
+          <tr><td>International participant</td><td class="fee-amount">$95</td></tr>
+          <tr><td>Listener / Attendee (no paper)</td><td class="fee-amount">₹500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="btn-group" style="justify-content:center">
+      <a href="#registration" class="btn btn-gold" onclick="show('registration')">View Full Fee Details</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Have questions?</div>
+    <div class="section-sub">Trust, indexing, withdrawal, fee waivers, and more — answered plainly</div>
+    <div class="btn-group" style="justify-content:center">
+      <a href="#faq" class="btn" onclick="show('faq')">Read the FAQ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     ABOUT PAGE
+══════════════════════════════════════ -->
+<div id="about" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">About PRASIT</div>
+    <h1>The story behind the name</h1>
+  </div>
+
+  <div class="section">
+    <div class="about-block">
+      <div class="about-text">
+        <div class="section-title">Our mission</div>
+        <br>
+        <p>PRASIT was founded to address a growing problem in Indian academic publishing — the proliferation of predatory conferences that collect fees without providing genuine peer review or credible indexing.</p>
+        <p>We believe BTech and MTech students who produce original, honest research deserve a platform with real reviewers, meaningful feedback, and verifiable publication records.</p>
+        <p>Peer review standards are applied consistently and are not adjusted based on submission volume.</p>
+        <p>We are India-rooted and open to international participation.</p>
+      </div>
+      <div>
+        <div class="about-sanskrit">
+          <div class="deva">प्रसार</div>
+          <p><em>Prasāra</em> — Sanskrit for the spread and dissemination of knowledge. The root from which PRASIT draws its name and its purpose.</p>
+          <p style="margin-top:14px">The traditional Deepam (oil lamp) in our symbol represents the pursuit of knowledge — present at convocations and academic ceremonies across India.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Organizing institution &amp; legal owner</div>
+    <div class="section-sub">Who runs PRASIT</div>
+    <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(260px,1fr))">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🏛️</div>
+        <h3>PRASIT Technologies</h3>
+        <p>The organizing body for PRASIT 2027, based in Chennai, India.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📧</div>
+        <h3>Contact</h3>
+        <p>All communication is handled by email.<br><br>
+        <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a><br>
+        <a href="https://prasit.in" style="color:var(--maroon);font-weight:600" target="_blank">prasit.in</a></p>
+      </div>
+    </div>
+    <div class="notice">PRASIT is not affiliated with any university, government body, or IIT/NIT. It is an independent academic conference organized by PRASIT Technologies.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Venue &amp; format</div>
+    <div class="section-sub">PRASIT 2027 is fully online</div>
+    <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr))">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">💻</div>
+        <h3>Online only</h3>
+        <p>PRASIT 2027 (15–16 March 2027) will be conducted entirely online. There is no physical venue. All sessions, presentations, and keynotes will be held via video conferencing.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🌐</div>
+        <h3>Platform</h3>
+        <p>Sessions will be hosted on a standard video conferencing platform (e.g. Zoom or Google Meet). Registered participants will receive joining links via email before the conference.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🕐</div>
+        <h3>Timezone</h3>
+        <p>All session timings are in Indian Standard Time (IST, UTC+5:30). A detailed schedule will be published by February 2027.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Publication &amp; DOI arrangements</div>
+    <div class="section-sub">What happens to accepted papers</div>
+    <div class="about-text">
+      <p>Accepted papers are published in the <strong>PRASIT 2027 Conference Proceedings</strong>, an open-access volume published by PRASIT Technologies, with a CrossRef DOI issued to each paper.</p>
+      <p>Full details on the proceedings publisher, DOI policy, licensing, copyright, and citation format are on the dedicated <a href="#publication" onclick="show('publication')" style="color:var(--maroon);font-weight:600">Publication page</a>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What we stand for</div>
+    <div class="section-sub">Process commitments, not aspirational claims</div>
+    <div class="stats">
+      <div class="stat"><div class="num">3</div><div class="lbl">Reviewers per paper</div></div>
+      <div class="stat"><div class="num">4+</div><div class="lbl">Weeks review cycle</div></div>
+      <div class="stat"><div class="num">30%</div><div class="lbl">Target acceptance rate</div></div>
+      <div class="stat"><div class="num">100%</div><div class="lbl">Papers get feedback</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CALL FOR PAPERS
+══════════════════════════════════════ -->
+<div id="cfp" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Call for Papers</div>
+    <h1>Submit your research</h1>
+    <p>Original, unpublished research in CS/IT from BTech &amp; MTech students<br><span style="font-size:10.5px;opacity:0.65">Last updated: 8 August 2026</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Submission guidelines</div>
+    <div class="section-sub">Read carefully before submitting</div>
+    <div class="sub-format">
+      <h4>Paper format requirements</h4>
+      <ul>
+        <li>Template <span>IEEE two-column format</span></li>
+        <li>Paper length (full paper) <span>6–8 pages</span></li>
+        <li>Paper length (short paper) <span>4–5 pages</span></li>
+        <li>File format <span>PDF only</span></li>
+        <li>Plagiarism threshold <span>Below 15%</span></li>
+        <li>Review type <span>Double-blind</span></li>
+        <li>Submission platform <span>PRASIT Portal (prasit-portal.vercel.app)</span></li>
+        <li>Language <span>English only</span></li>
+      </ul>
+    </div>
+    <div class="notice">
+      <strong>Double-blind review:</strong> Remove all author names, affiliations, acknowledgements, and self-identifying references from the submitted PDF. Papers that reveal author identity will be desk-rejected without review.
+    </div>
+    <div class="btn-group">
+      <a class="btn btn-gold" href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener">Download IEEE Template</a>
+      <a class="btn" href="https://prasit-portal.vercel.app/auth/register" target="_blank" rel="noopener">Submit via PRASIT Portal</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Topics of interest</div>
+    <div class="section-sub">Within each track, we welcome but are not limited to</div>
+    <div class="tracks">
+      <div class="track"><h3>AI &amp; Machine Learning</h3><p>Deep learning architectures · Natural language processing · Computer vision · Explainable AI · AI for social good · Federated learning · Generative models</p></div>
+      <div class="track"><h3>Cybersecurity &amp; Blockchain</h3><p>Intrusion detection systems · Cryptographic protocols · Smart contract security · Zero-trust architecture · Digital forensics · Privacy-preserving computation</p></div>
+      <div class="track"><h3>Cloud &amp; IoT</h3><p>Microservices architecture · Serverless computing · IoT data management · Edge intelligence · Digital twins · Resource optimization</p></div>
+      <div class="track"><h3>Data Science &amp; Big Data</h3><p>Predictive analytics · Graph databases · Real-time stream processing · Data quality · Knowledge representation · Healthcare analytics</p></div>
+      <div class="track"><h3>Software Engineering</h3><p>Testing automation · Continuous integration · Code quality metrics · Human-computer interaction · Accessibility · Requirements traceability</p></div>
+      <div class="track"><h3>Networks &amp; Communication</h3><p>Wireless sensor networks · Network slicing · Quality of service · Delay-tolerant networks · Protocol optimization · 5G applications</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Presentation format</div>
+    <div class="section-sub">What to expect if your paper is accepted</div>
+    <div class="sub-format">
+      <h4>Session details</h4>
+      <ul>
+        <li>Format <span>Fully online, live video presentation</span></li>
+        <li>Presentation length <span>10–12 minutes + 3–5 min Q&amp;A</span></li>
+        <li>Platform <span>Shared with accepted authors closer to the date</span></li>
+        <li>Slides <span>PowerPoint or PDF, author-prepared</span></li>
+      </ul>
+    </div>
+    <div class="notice">Detailed scheduling, session platform, and technical requirements (camera/mic setup, screen-share instructions) will be emailed to accepted authors after the acceptance notification date. See the <a href="#faq" onclick="show('faq')" style="color:var(--maroon);font-weight:600">FAQ</a> for more.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     IMPORTANT DATES
+══════════════════════════════════════ -->
+<div id="dates" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Important Dates</div>
+    <h1>PRASIT 2027 timeline</h1>
+    <p>All deadlines are at 23:59 IST (Indian Standard Time)<br><span style="font-size:10.5px;opacity:0.65">Last updated: 8 August 2026</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Key deadlines</div>
+    <div class="table-wrap">
+      <table class="dates-table">
+        <thead>
+          <tr><th>Event</th><th>Date</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Conference website live</td><td class="deadline">August 2026</td><td><span class="badge badge-open">Upcoming</span></td></tr>
+          <tr><td>Call for papers opens</td><td class="deadline">1 September 2026</td><td><span class="badge badge-open">Upcoming</span></td></tr>
+          <tr><td>Paper submission deadline</td><td class="deadline">30 November 2026</td><td><span class="badge badge-soon">Open</span></td></tr>
+          <tr><td>Review assignment complete</td><td class="deadline">10 December 2026</td><td><span class="badge badge-gold">Scheduled</span></td></tr>
+          <tr><td>Review deadline</td><td class="deadline">15 January 2027</td><td><span class="badge badge-gold">Scheduled</span></td></tr>
+          <tr><td>Acceptance notification</td><td class="deadline">31 January 2027</td><td><span class="badge badge-gold">Scheduled</span></td></tr>
+          <tr><td>Camera-ready submission</td><td class="deadline">20 February 2027</td><td><span class="badge badge-gold">Scheduled</span></td></tr>
+          <tr><td>Conference dates</td><td class="deadline">15–16 March 2027</td><td><span class="badge badge-gold">Scheduled</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notice">Deadlines are firm. No extensions will be granted. Plan your submission timeline accordingly.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     COMMITTEE
+══════════════════════════════════════ -->
+<div id="committee" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Committee</div>
+    <h1>Organizing &amp; program committee</h1>
+    <p><span style="font-size:10.5px;opacity:0.65">Last updated: 8 August 2026</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Organizing committee</div>
+    <div class="section-sub">The team responsible for conference operations</div>
+    <div class="committee-grid">
+      <div class="member">
+        <div class="member-avatar">AR</div>
+        <h4>Amit Raj</h4>
+        <div class="role">Conference Chair</div>
+        <div class="affil">PRASIT Technologies, Chennai</div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">DK</div>
+        <h4>Prajakta Raghunathan</h4>
+        <div class="role">Technical Program Chair</div>
+        <div class="affil">PRASIT Technologies</div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">RR</div>
+        <h4>Virendra Patil</h4>
+        <div class="role">Publication Chair</div>
+        <div class="affil">PRASIT Technologies</div>
+      </div>
+      <div class="member">
+        <div class="member-avatar">VS</div>
+        <h4>Sanjay Deshmukh</h4>
+        <div class="role">Web &amp; Design Chair</div>
+        <div class="affil">PRASIT Technologies</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Technical program committee</div>
+    <div class="section-sub">16 reviewers drawn from academia and industry across all 6 tracks</div>
+    <div class="tpc-grid">
+      <div class="tpc-card"><div class="tpc-avatar">SD</div><h4>Ms. Sharmistha Dey</h4><div class="affil">Techno India University, Kolkata</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">JJ</div><h4>Dr. J. Janet</h4><div class="affil">VIT, Bhopal</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">JD</div><h4>Mr. Joshua David</h4><div class="affil">Mphasis</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">DD</div><h4>Dr. Deb Prasad Dey</h4><div class="affil">NIT, Jamshedpur</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">TG</div><h4>Dr. TukTuki Rakshit Gosh</h4><div class="affil">Jadavpur University</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">AH</div><h4>Mr. Anurag Harsh</h4><div class="affil">Oracle</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">MS</div><h4>Ms. Moumita Sengupta</h4><div class="affil">BITS Pilani</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">SB</div><h4>Dr. Sita Devi Bhartula</h4><div class="affil">AVIT, Chennai</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">RJ</div><h4>Ms. Rajni Jadhav</h4><div class="affil">Amdocs</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">TS</div><h4>Dr. Tamil Selvi</h4><div class="affil">St. Joseph</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">AR</div><h4>Ms. Anusha Reddy</h4><div class="affil">VIT, Amaravati</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">AG</div><h4>Mr. Arvind Goyal</h4><div class="affil">Infosys</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">DV</div><h4>Ms. Deepika Vadevalli</h4><div class="affil">State Street</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">TD</div><h4>Mr. Tapan Dey</h4><div class="affil">TCS</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">RS</div><h4>Mr. Ramesh Singla</h4><div class="affil">Walmart</div></div>
+      <div class="tpc-card"><div class="tpc-avatar">RM</div><h4>Ms. Rajneesh Malviya</h4><div class="affil">Amazon</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Keynote speakers</div>
+    <div class="section-sub">Confirmed for PRASIT 2027</div>
+    <div class="keynote-grid">
+      <div class="keynote-card">
+        <div class="keynote-photo-wrap">
+          <img class="keynote-photo" src="assets/keynote-sanjay-mittal.jpg" alt="Photo of Sanjay Mittal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="keynote-photo-fallback">SM</div>
+        </div>
+        <h4>Sanjay Mittal</h4>
+        <div class="role">Keynote Speaker</div>
+        <div class="affil">Professor, IIT Madras</div>
+      </div>
+      <div class="keynote-card">
+        <div class="keynote-photo-wrap">
+          <img class="keynote-photo" src="assets/keynote-surya-kumar.jpg" alt="Photo of Surya Kumar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="keynote-photo-fallback">SK</div>
+        </div>
+        <h4>Surya Kumar</h4>
+        <div class="role">Keynote Speaker</div>
+        <div class="affil">IIT Roorkee</div>
+      </div>
+    </div>
+    <div class="notice">Talk titles and abstracts will be published here as they are finalized. Additional keynote speakers may be added — faculty and industry researchers interested in delivering a keynote are welcome to write to <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a>.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     REVIEW PROCESS
+══════════════════════════════════════ -->
+<div id="review" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Review Process</div>
+    <h1>How peer review works at PRASIT</h1>
+    <p>Transparency about our review process is core to our credibility</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">The review process</div>
+    <div class="section-sub">Every paper follows these exact steps</div>
+    <div class="review-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Desk check (1 week)</h4>
+          <p>TPC Chair checks: correct format, plagiarism below 15%, within scope, double-blind anonymity maintained. Papers failing desk check are returned immediately with reasons.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Reviewer assignment (1 week)</h4>
+          <p>TPC Chair assigns 3 reviewers per paper from the relevant track. Conflict of interest is checked — no reviewer from the same institution as any author.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Independent review (4 weeks)</h4>
+          <p>Each reviewer independently evaluates the paper on: originality, technical quality, relevance, writing clarity, and references. Reviewers do not see each other's scores during this phase.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>TPC discussion (1 week)</h4>
+          <p>For borderline papers, TPC Chair facilitates discussion among reviewers. Final accept/reject decision is based on reviewer consensus and TPC Chair judgment.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Author notification (with feedback)</h4>
+          <p>ALL authors — accepted and rejected — receive the full reviewer comments. Rejected authors receive constructive feedback explaining what was lacking and how to improve.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <h4>Camera-ready &amp; DOI assignment</h4>
+          <p>Accepted authors submit final camera-ready PDF. Each paper is assigned a permanent CrossRef DOI and published in the official PRASIT proceedings.</p>
+        </div>
+      </div>
+    </div>
+    <div class="notice"><strong>Our commitment:</strong> We target a 25–35% acceptance rate. This is not a quota — it is a quality standard. If submissions are of high quality, acceptance may be higher. If quality is poor, it will be lower.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Reviewer evaluation criteria</div>
+    <div class="section-sub">Every reviewer scores each paper against the same weighted framework</div>
+    <div class="table-wrap">
+      <table class="dates-table">
+        <thead><tr><th>Criterion</th><th>Weight</th></tr></thead>
+        <tbody>
+          <tr><td>Originality</td><td><strong>25%</strong></td></tr>
+          <tr><td>Technical Quality</td><td><strong>25%</strong></td></tr>
+          <tr><td>Methodology</td><td><strong>20%</strong></td></tr>
+          <tr><td>Results &amp; Analysis</td><td><strong>15%</strong></td></tr>
+          <tr><td>Relevance to Track</td><td><strong>10%</strong></td></tr>
+          <tr><td>Presentation &amp; Writing Clarity</td><td><strong>5%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notice">Reviewers score each criterion independently and provide written comments. The weighted score guides the accept/reject recommendation but does not replace reviewer and TPC judgment on borderline papers.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Conflict of interest</div>
+    <div class="section-sub">Applied to every reviewer and TPC member on every paper</div>
+    <div class="tracks">
+      <div class="track"><h3>Same institution</h3><p>The reviewer is currently employed at or enrolled in the same university or organization as any author.</p></div>
+      <div class="track"><h3>Recent co-authorship</h3><p>The reviewer has co-authored a paper with any author within the last 3 years.</p></div>
+      <div class="track"><h3>Supervisor/student relationship</h3><p>The reviewer has served, or currently serves, as the PhD/MTech advisor or supervisee of any author.</p></div>
+      <div class="track"><h3>Personal or financial relationship</h3><p>The reviewer has a close personal relationship with, or financial interest in, any author's work.</p></div>
+      <div class="track"><h3>Reviewer-requested conflicts</h3><p>The reviewer independently identifies and discloses any other relationship that could bias their judgment.</p></div>
+      <div class="track"><h3>Committee member submissions</h3><p>If a TPC or organizing committee member is an author on a submission, they take no part in that paper's review or decision at any stage.</p></div>
+    </div>
+    <div class="notice"><strong>How conflicts are handled:</strong> Before assignment, the TPC Chair cross-checks author affiliations and names against the reviewer pool. Any match on the categories above results in that reviewer being excluded from the assignment for that paper — no exceptions. Authors may also name individuals they believe should not review their paper, with a brief reason, at submission time; such requests are considered by the TPC Chair.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PUBLICATION
+══════════════════════════════════════ -->
+<div id="publication" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Publication</div>
+    <h1>PRASIT 2027 Proceedings</h1>
+    <p>How accepted papers are published, indexed, and cited</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Proceedings publisher</div>
+    <div class="about-text">
+      <p>Accepted papers are published in the <strong>PRASIT 2027 Conference Proceedings</strong>, an open-access proceedings volume published by <strong>PRASIT Technologies</strong>, India.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Access, rights &amp; licensing</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🔓</div>
+        <h3>Open-access policy</h3>
+        <p>All proceedings are freely accessible online at prasit.in. No paywall, no subscription, no embargo period.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">©️</div>
+        <h3>Copyright</h3>
+        <p>Authors retain copyright of their own work. By submitting, authors grant PRASIT Technologies a non-exclusive license to publish, distribute, and archive the paper as part of the proceedings.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📄</div>
+        <h3>Licensing</h3>
+        <p>Papers are published under <strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> — readers may share and adapt the work with credit to the original authors.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🏛️</div>
+        <h3>Institutional repositories</h3>
+        <p>Because copyright is retained by authors under CC BY 4.0, authors are free to upload their accepted, published paper to their institutional repository at any time.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📝</div>
+        <h3>Preprints</h3>
+        <p>Posting a preprint on arXiv or a similar server before or after submission is permitted and does not count as duplicate submission, provided it is disclosed at submission.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🖼️</div>
+        <h3>Third-party material</h3>
+        <p>If a paper includes figures, images, or data owned by a third party, the author is responsible for securing permission or using material appropriately licensed for reuse before submission.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">DOI &amp; indexing</div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📜</div>
+        <h3>DOI policy</h3>
+        <p>Each accepted paper receives a permanent Digital Object Identifier (DOI), making it globally findable and citable, assigned upon publication in the proceedings.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🔗</div>
+        <h3>CrossRef</h3>
+        <p>DOIs are issued via <strong>CrossRef</strong>, the standard DOI registration agency used by IEEE, Springer, Elsevier, and major academic publishers. PRASIT Technologies' CrossRef membership is confirmed.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🎓</div>
+        <h3>Google Scholar status</h3>
+        <p>Proceedings from PRASIT's four prior editions are indexed in Google Scholar. The PRASIT 2027 proceedings will be submitted for indexing after publication; timelines are set by Google, not by PRASIT.</p>
+      </div>
+    </div>
+    <div class="notice"><strong>Future indexing policy:</strong> PRASIT 2027 is the fifth edition. On approval, the proceedings series will be submitted to the Web of Science Book Citation Index (BkCI) and to SCOPUS for evaluation and indexing (T&amp;C)*. We do <strong>not</strong> currently claim confirmed Scopus, Web of Science, IEEE Xplore, or DBLP indexing. Any confirmed indexing in those databases will only be announced after official confirmation from the indexing body. Authors who require Scopus/WoS-indexed publications for university requirements should factor this in before submitting.<br><br><span style="font-size:11px;color:var(--text-light)">*T&amp;C: Submission for evaluation does not guarantee acceptance. Indexing bodies apply their own independent review criteria and timelines, which are outside PRASIT's control.</span></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">ISBN &amp; ISSN</div>
+    <div class="sub-format">
+      <h4>Proceedings identifiers</h4>
+      <ul>
+        <li>ISBN <span>To be assigned before proceedings publication</span></li>
+        <li>ISSN <span>Not applicable — the proceedings are a one-time conference volume, not a serial publication</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">How published papers will appear</div>
+    <div class="about-text">
+      <p>Each accepted paper is published as an individually citable entry in the proceedings, listed by track, with its own DOI landing page. Full-text PDFs are hosted on prasit.in and remain permanently accessible at no cost to readers.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Proceedings status</div>
+    <div class="notice">
+      <strong>PRASIT 2027 Proceedings</strong> — fifth edition. Publication is scheduled after the conference concludes (March 2027), once all camera-ready papers and DOIs are finalized.<br><br>
+      <span style="color:var(--text-light)">Proceedings from the previous four editions are published and linked below for reference. Once finalized, this year's volume will be linked here as <strong>"PRASIT 2027 Proceedings → View Proceedings."</strong></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Example citation format</div>
+    <div class="about-text">
+      <p>Authors are encouraged to cite PRASIT 2027 papers in IEEE style. Example:</p>
+    </div>
+    <div class="notice" style="font-family: monospace; font-size: 12px; line-height: 1.8;">
+      A. Author and B. Author, "Title of the paper," in <em>Proc. PRASIT 2027 – Premier Research &amp; Academic Symposium in Information Technology</em>, Online, India, Mar. 15–16, 2027, pp. xx–xx, doi: [assigned upon publication].
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<div id="faq" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">FAQ</div>
+    <h1>Frequently asked questions</h1>
+    <p>Straight answers to the questions we get most</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">About PRASIT 2027</div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Why should I trust PRASIT?</summary>
+        <p>PRASIT 2027 is the fifth edition, with four completed editions and published proceedings behind it. Beyond that track record, we've tried to make everything verifiable: our full review process is published on the <a href="#review" onclick="show('review')" style="color:var(--maroon);font-weight:600">Review Process page</a>, and our policies are public and specify what is confirmed versus still in progress — for example, Scopus/Web of Science indexing, which is submitted for evaluation but not yet confirmed.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is PRASIT 2027 indexed in Scopus or Web of Science?</summary>
+        <p>Not yet confirmed, and we won't claim otherwise. Each accepted paper receives a CrossRef DOI (registration confirmed), making it citable and findable, and proceedings from prior editions are indexed in Google Scholar. On approval, the proceedings series will be submitted to the Web of Science Book Citation Index (BkCI) and to SCOPUS for evaluation and indexing — submission does not guarantee acceptance, and PRASIT will only display those logos once officially confirmed by each body. We do not claim IEEE Xplore indexing.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is acceptance guaranteed if I pay the registration fee?</summary>
+        <p>No. Every paper goes through double-blind peer review regardless of fee payment, and papers can be rejected. Registration fees cover conference operations (platform, certificates, proceedings assembly) — they are not a pay-to-publish arrangement.</p>
+      </details>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Submission &amp; presentation</div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is PRASIT 2027 an online or in-person conference?</summary>
+        <p>Fully online. Authors present live over video call during the 15–16 March 2027 sessions; exact platform and scheduling details will be shared with accepted authors closer to the date.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if my paper is rejected — do I get any feedback?</summary>
+        <p>Yes. All authors, accepted or rejected, receive the full reviewer comments. Rejected authors get feedback explaining what was lacking and how to improve, rather than a bare rejection notice.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I withdraw my paper after it's accepted?</summary>
+        <p>Yes, subject to our refund schedule: full refund if withdrawn more than 30 days before the conference, 50% within 15–30 days, and no refund within 14 days of the conference. See the <a href="#policies" onclick="show('policies')" style="color:var(--maroon);font-weight:600">Policies page</a> for full terms.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is a fee waiver available?</summary>
+        <p>Students from economically weaker backgrounds may apply for a fee waiver by writing to <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a> with their institution ID and a brief note.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PROGRAMME
+══════════════════════════════════════ -->
+<div id="programme" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Programme</div>
+    <h1>Conference programme</h1>
+    <p>15–16 March 2027 · Fully online · All times in IST (Indian Standard Time)<br><span style="font-size:10.5px;opacity:0.65">Last updated: 8 August 2026</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Day 1 — 15 March 2027</div>
+    <div class="table-wrap">
+      <table class="dates-table">
+        <thead>
+          <tr><th>Time (IST)</th><th>Session</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>09:30 – 10:00</td><td>Registration &amp; platform check-in</td></tr>
+          <tr><td>10:00 – 10:15</td><td>Opening ceremony &amp; welcome address — Conference Chair</td></tr>
+          <tr><td>10:15 – 11:00</td><td>Keynote address — speaker to be announced</td></tr>
+          <tr><td>11:00 – 11:15</td><td>Break</td></tr>
+          <tr><td>11:15 – 13:00</td><td>Parallel track sessions I — Track 1: AI &amp; Machine Learning · Track 2: Cybersecurity &amp; Blockchain · Track 3: Cloud Computing &amp; IoT</td></tr>
+          <tr><td>13:00 – 14:00</td><td>Lunch break</td></tr>
+          <tr><td>14:00 – 15:00</td><td>Invited talk — speaker to be announced</td></tr>
+          <tr><td>15:00 – 15:15</td><td>Day 1 closing remarks</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Day 2 — 16 March 2027</div>
+    <div class="table-wrap">
+      <table class="dates-table">
+        <thead>
+          <tr><th>Time (IST)</th><th>Session</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>09:30 – 10:00</td><td>Platform check-in</td></tr>
+          <tr><td>10:00 – 11:45</td><td>Parallel track sessions II — Track 4: Data Science &amp; Big Data · Track 5: Software Engineering · Track 6: Computer Networks &amp; Communication</td></tr>
+          <tr><td>11:45 – 12:00</td><td>Break</td></tr>
+          <tr><td>12:00 – 13:00</td><td>Industry panel / invited talk — speaker to be announced</td></tr>
+          <tr><td>13:00 – 14:00</td><td>Lunch break</td></tr>
+          <tr><td>14:00 – 15:00</td><td>Best paper award &amp; valedictory session</td></tr>
+          <tr><td>15:00 – 15:15</td><td>Closing ceremony &amp; certificate distribution</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notice">Session times are indicative and may shift slightly depending on final paper count and track distribution. Keynote and invited speaker names will be published here once confirmed. The video conferencing platform and per-track joining links will be emailed to registered authors and attendees ahead of the conference.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     REGISTRATION
+══════════════════════════════════════ -->
+<div id="registration" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Registration</div>
+    <h1>Registration &amp; fees</h1>
+    <p>Fees cover platform, review administration, proceedings assembly, and certificates<br><span style="font-size:10.5px;opacity:0.65">Last updated: 8 August 2026</span></p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Registration fees</div>
+    <div class="table-wrap">
+      <table class="fee-table">
+        <thead>
+          <tr><th>Category</th><th>Registration Fee</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BTech / MTech Student (Indian)</td><td class="fee-amount">₹3,900</td></tr>
+          <tr><td>PhD Scholar (Indian)</td><td class="fee-amount">₹3,900</td></tr>
+          <tr><td>Faculty / Industry (Indian)</td><td class="fee-amount">₹3,900</td></tr>
+          <tr><td>International participant</td><td class="fee-amount">$95</td></tr>
+          <tr><td>Listener / Attendee (no paper)</td><td class="fee-amount">₹500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notice">
+      <strong>Fee waivers:</strong> Students from economically weaker backgrounds may apply for a fee waiver. Write to <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a> with your institution ID and a brief note.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What registration covers</div>
+    <div class="cards" style="grid-template-columns: repeat(2, 1fr)">
+      <div class="card">
+        <h3 style="color:#1a5c18">Registration includes</h3>
+        <p style="line-height:2">
+          ✓ Paper presentation slot<br>
+          ✓ Certificate of presentation<br>
+          ✓ Proceedings with DOI<br>
+          ✓ CrossRef DOI registration<br>
+          ✓ Full conference session access
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="color:#a33">Registration does NOT include</h3>
+        <p style="line-height:2">
+          ✗ Guaranteed acceptance<br>
+          ✗ Scopus indexing<br>
+          ✗ Web of Science indexing<br>
+          ✗ Travel, visa, or accommodation<br>
+          ✗ Journal publication
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Payment details</div>
+    <div class="section-sub">How and to whom payment is made</div>
+    <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr))">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🏦</div>
+        <h3>Payment recipient</h3>
+        <p>PRASIT Technologies. Payments made to any other name or account are not valid PRASIT registrations.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">💳</div>
+        <h3>Payment method</h3>
+        <p>Bank transfer or UPI, processed via the PRASIT Submission Portal at the time of registration, after paper acceptance.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🧾</div>
+        <h3>Invoice</h3>
+        <p>A payment receipt is emailed automatically on successful payment. A formal invoice can be requested at <a href="mailto:contact@prasit.in" style="color:var(--maroon)">contact@prasit.in</a>.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📑</div>
+        <h3>Taxes</h3>
+        <p>No GST is charged. The amounts shown in the fee table above are inclusive of all taxes — the total payable, with nothing added at checkout.</p>
+      </div>
+    </div>
+    <div class="notice">See the <a href="#policies" onclick="show('policies')" style="color:var(--maroon);font-weight:600">Withdrawal &amp; refund policy</a> for the refund schedule and cancellation terms.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<div id="contact" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Contact</div>
+    <h1>Get in touch</h1>
+    <p>We respond within 48 hours on working days (Mon–Sat, IST)</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Contact us</div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4><span class="icon" aria-hidden="true">✉️</span> General enquiries</h4>
+        <p><a href="mailto:contact@prasit.in">contact@prasit.in</a><br><br>We respond within 48 hours on working days.</p>
+      </div>
+      <div class="contact-card">
+        <h4><span class="icon" aria-hidden="true">📄</span> Paper submissions</h4>
+        <p>Via the PRASIT Submission Portal only.<br>Do not email papers directly.<br><br><a href="https://prasit-portal.vercel.app/" target="_blank" rel="noopener">prasit-portal.vercel.app</a></p>
+      </div>
+      <div class="contact-card">
+        <h4><span class="icon" aria-hidden="true">👥</span> Join as reviewer</h4>
+        <p><a href="mailto:tpc@prasit.in">tpc@prasit.in</a><br><br>PhD holders with active publications are welcome to apply to join the TPC.</p>
+      </div>
+      <div class="contact-card">
+        <h4><span class="icon" aria-hidden="true">🔗</span> Follow us</h4>
+        <p>Instagram: <a href="https://instagram.com/prasitconf" target="_blank" rel="noopener">@prasitconf</a><br>LinkedIn: <span style="color:var(--text-light)">Coming soon</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Organizational &amp; contact details</div>
+    <div class="section-sub">Registered organization and responsible contacts</div>
+    <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(240px,1fr))">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🏢</div>
+        <h3>Registered organization</h3>
+        <p><strong>PRASIT Technologies</strong><br>Chennai, India<br><br>
+        <a href="https://prasit.in" style="color:var(--maroon);font-weight:600" target="_blank">prasit.in</a></p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🧑‍💼</div>
+        <h3>Responsible contact person</h3>
+        <p><strong>Amit Raj</strong><br>Conference Chair<br>PRASIT Technologies<br><br>
+        Legally and organizationally responsible for PRASIT 2027. Reachable at <a href="mailto:contact@prasit.in" style="color:var(--maroon)">contact@prasit.in</a>.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">📧</div>
+        <h3>Email contacts</h3>
+        <p>General: <a href="mailto:contact@prasit.in" style="color:var(--maroon)">contact@prasit.in</a><br>
+        TPC / Reviewers: <a href="mailto:tpc@prasit.in" style="color:var(--maroon)">tpc@prasit.in</a><br><br>
+        <em>Do not email paper submissions. Use the <a href="https://prasit-portal.vercel.app/" style="color:var(--maroon)" target="_blank" rel="noopener">PRASIT Submission Portal</a>.</em><br><br>
+        All PRASIT communication is handled by email — there is no postal correspondence address.</p>
+      </div>
+    </div>
+    <div class="notice" style="margin-top:24px">We do not guarantee acceptance to any author regardless of fee payment. All papers go through double-blind peer review. We are not affiliated with any university or government body.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<!-- ══════════════════════════════════════
+     POLICIES PAGE
+══════════════════════════════════════ -->
+<div id="policies" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Policies</div>
+    <h1>Conference policies</h1>
+    <p>PRASIT operates under these policies — applied consistently to all submissions</p>
+  </div>
+
+  <div class="section">
+    <div class="notice" style="margin-bottom:0">
+      <strong>Policy version:</strong> 1.0 &nbsp;·&nbsp; <strong>Effective from:</strong> 6 August 2026 &nbsp;·&nbsp; <strong>Responsible authority:</strong> Conference Chair, PRASIT Technologies &nbsp;·&nbsp; <strong>Contact:</strong> <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a><br>
+      Any revision to these policies will update the version number and effective date above.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">PRASIT anti-predatory commitment</div>
+    <div class="section-sub">What separates PRASIT from a pay-to-publish operation</div>
+    <div class="tracks">
+      <div class="track"><h3>No pay-for-acceptance</h3><p>PRASIT does not guarantee acceptance based on payment. Every paper is reviewed on merit before any registration fee is requested.</p></div>
+      <div class="track"><h3>Submission separated from registration</h3><p>Registration fees are only requested after a paper is accepted — never as a condition of submission or review.</p></div>
+      <div class="track"><h3>No premature indexing claims</h3><p>Confirmed indexing claims (Scopus, Web of Science, DBLP, etc.) are only published after official confirmation from the indexing body — never in advance. Where proceedings have been submitted for evaluation but not yet confirmed, this is disclosed as "submitted for evaluation," never presented as confirmed indexing.</p></div>
+      <div class="track"><h3>No implied affiliations</h3><p>PRASIT does not imply affiliation with any university, government body, or other organization unless that affiliation is real and disclosed.</p></div>
+      <div class="track"><h3>Publication terms documented publicly</h3><p>DOI, copyright, licensing, and open-access arrangements are published on this site — not hidden in fine print or disclosed only after payment.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Publication ethics</div>
+    <div class="section-sub">PRASIT follows COPE (Committee on Publication Ethics) guidelines</div>
+    <div class="about-text">
+      <p><strong>Authorship:</strong> All listed authors must have made a genuine intellectual contribution to the work. Honorary, gift, or ghost authorship is not permitted. The corresponding author is responsible for ensuring all co-authors have approved the final submission and agree to its publication.</p>
+      <p><strong>Originality:</strong> Submitted work must be original and must not be under review at any other conference or journal simultaneously. Duplicate submission — submitting the same paper to two venues at the same time — will result in immediate rejection from PRASIT and notification to the other venue if identified.</p>
+      <p><strong>Data integrity:</strong> Fabrication, falsification, or selective reporting of data is a serious breach of ethics. Authors must be able to provide underlying data upon request. PRASIT reserves the right to retract published papers if post-publication misconduct is established.</p>
+      <p><strong>Data integrity:</strong> Fabrication, falsification, or selective reporting of data is a serious breach of ethics. Authors must be able to provide underlying data upon request. PRASIT reserves the right to retract published papers if post-publication misconduct is established.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Generative AI policy</div>
+    <div class="section-sub">Applies to all use of generative AI tools in preparing a submission</div>
+    <div class="tracks">
+      <div class="track"><h3>Language assistance permitted</h3><p>AI tools may assist with language editing, grammar, and clarity — this does not need special disclosure beyond acknowledging the tool was used.</p></div>
+      <div class="track"><h3>AI cannot be an author</h3><p>No AI tool may be listed as an author or co-author. Authorship requires accountability that a tool cannot bear.</p></div>
+      <div class="track"><h3>Authors remain responsible</h3><p>Authors are fully responsible for all claims, analysis, and content in the paper, regardless of what tools assisted in producing it.</p></div>
+      <div class="track"><h3>Fabricated citations prohibited</h3><p>AI-generated or "hallucinated" references that do not correspond to real, verifiable sources are treated as a data-integrity violation.</p></div>
+      <div class="track"><h3>AI-generated media disclosed</h3><p>Any AI-generated images, figures, or synthetic data used in the paper must be clearly disclosed as such.</p></div>
+      <div class="track"><h3>References must be verified</h3><p>Authors must personally verify that every reference in the paper exists and is accurately represented before submission.</p></div>
+      <div class="track"><h3>Confidentiality preserved</h3><p>Unpublished or confidential material — including other authors' unpublished work — must not be entered into AI tools that may retain or expose it.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Similarity screening</div>
+    <div class="section-sub">Checked at desk review before any paper enters peer review</div>
+    <div class="about-text">
+      <p>All submissions undergo similarity screening using PRASIT's academic plagiarism detection tool. A similarity score above the permitted threshold may trigger additional examination — but the score alone does not decide the outcome. Decisions are based on the <strong>nature and source</strong> of the overlap, not on percentage alone: a paper with 16% similarity from properly cited sources and standard phrasing may pass, while a paper with 12% similarity copied verbatim from one uncited source may not.</p>
+    </div>
+    <div class="cards" style="grid-template-columns:repeat(auto-fit, minmax(200px,1fr))">
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">✅</div>
+        <h3>Typically proceeds</h3>
+        <p>Below 15% similarity (excluding references and template boilerplate), with no single-source concentration.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">⚠️</div>
+        <h3>Additional examination</h3>
+        <p>15–25% similarity, or any concentration in one source — reviewed by the TPC Chair before proceeding.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">❌</div>
+        <h3>Typically rejected</h3>
+        <p>Above 25% similarity, or verbatim uncited copying regardless of overall percentage — rejected at desk check with the similarity report shared with the author.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" aria-hidden="true">🚫</div>
+        <h3>Self-plagiarism</h3>
+        <p>Submitting your own prior work without disclosure and proper citation is treated as plagiarism and results in desk rejection.</p>
+      </div>
+    </div>
+    <div class="notice">Our operational threshold is 15% as a screening trigger, not an automatic pass/fail line. Every flagged paper is examined by the TPC Chair before a decision is made.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Conflict of interest (COI) policy</div>
+    <div class="section-sub">Applied to all reviewers and TPC members</div>
+    <div class="about-text">
+      <p>A conflict of interest exists when a reviewer has a professional or personal relationship with an author that could affect their objectivity. The following situations constitute a COI and require a reviewer to recuse themselves:</p>
+    </div>
+    <div class="tracks" style="margin-top:16px">
+      <div class="track"><h3>Same institution</h3><p>The reviewer is currently employed at or enrolled in the same university or organization as any author.</p></div>
+      <div class="track"><h3>Recent co-authorship</h3><p>The reviewer has co-authored a paper with any author in the last 3 years.</p></div>
+      <div class="track"><h3>Advisor / advisee relationship</h3><p>The reviewer has served (or currently serves) as the PhD/MTech advisor or supervisee of any author.</p></div>
+      <div class="track"><h3>Personal or financial conflict</h3><p>The reviewer has a close personal relationship with, or financial interest in, any author's work.</p></div>
+    </div>
+    <div class="notice">Authors may declare COIs at submission time by listing names of individuals they believe should not review their paper, with a brief reason. Such requests are considered by the TPC Chair but are not guaranteed to be honored.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Privacy policy</div>
+    <div class="section-sub">What data PRASIT collects and how it is used</div>
+    <div class="notice">Our full Privacy Policy — covering data collected, purpose, legal basis, storage, third-party processors, payment data, cookies, retention, deletion, and your rights — is published as its own page. <a href="#privacy" onclick="show('privacy')" style="color:var(--maroon);font-weight:600">Read the Privacy Policy →</a></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Withdrawal &amp; refund policy</div>
+    <div class="section-sub">Read before paying registration</div>
+    <div class="about-text">
+      <p><strong>Paper withdrawal before review:</strong> Authors may withdraw a submitted paper at any time before the review assignment is complete by writing to contact@prasit.in. No fee applies at this stage since registration is paid after acceptance.</p>
+      <p><strong>Withdrawal after acceptance:</strong> If an accepted author withdraws after paying registration, the paper will be removed from the proceedings. Refund eligibility: full refund if withdrawn more than 30 days before the conference date; 50% refund within 15–30 days; no refund within 14 days of the conference.</p>
+      <p><strong>Conference cancellation:</strong> In the event PRASIT 2027 is cancelled for reasons outside our control, registered participants will receive a full refund within 30 working days.</p>
+    </div>
+    <div class="notice">All policy queries should be directed to <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a>. Policies may be updated; the version published on prasit.in at the time of submission applies.</div>
+    <div class="notice">See also our standalone <a href="#privacy" onclick="show('privacy')" style="color:var(--maroon);font-weight:600">Privacy Policy</a> and <a href="#terms" onclick="show('terms')" style="color:var(--maroon);font-weight:600">Terms &amp; Conditions</a>.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PRIVACY POLICY
+══════════════════════════════════════ -->
+<div id="privacy" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Privacy Policy</div>
+    <h1>Privacy Policy</h1>
+    <p>Version 1.0 · Effective from 8 August 2026 · Last updated: 8 August 2026</p>
+  </div>
+
+  <div class="section">
+    <div class="about-text">
+      <p><strong>1. Data collected.</strong> When you submit a paper, register, or contact us, we collect your name, email address, institutional affiliation, and any information you voluntarily provide. Paper content is collected for the purpose of review and, if accepted, publication. Bank transfer/UPI payment confirmations are collected to verify registration.</p>
+      <p><strong>2. Purpose.</strong> Data is collected solely to operate the conference: processing submissions, assigning reviewers, sending acceptance/rejection notifications, confirming registration, producing certificates, and publishing proceedings.</p>
+      <p><strong>3. Legal basis.</strong> We process your data on the basis of your consent (given at submission/registration) and to perform the service you have requested (paper review, conference participation).</p>
+      <p><strong>4. Data storage.</strong> Submission, review, and registration data is stored on the PRASIT Submission Portal (prasit-portal.vercel.app), hosted on Vercel's infrastructure.</p>
+      <p><strong>5. Third-party processors.</strong> We use the PRASIT Submission Portal (hosting: Vercel) to manage submissions and registration, and CrossRef to register DOIs for accepted papers. We do not sell, rent, or share personal data with third parties for commercial or marketing purposes.</p>
+      <p><strong>6. Payment data.</strong> Registration is paid via bank transfer or UPI directly to PRASIT Technologies. We do not collect or store full bank account numbers or UPI PINs on our systems — payment confirmation (transaction reference/screenshot) is retained for reconciliation only.</p>
+      <p><strong>7. Cookies.</strong> The main conference website (prasit.in) does not use tracking or advertising cookies. The submission portal uses only essential session cookies required to keep you logged in.</p>
+      <p><strong>8. Analytics.</strong> We may use basic, privacy-respecting website analytics (e.g. aggregate page-visit counts) to understand site usage. This data is not linked to your submission or registration identity.</p>
+      <p><strong>9. Retention.</strong> Submission and review data is retained for a minimum of 5 years for academic integrity purposes. Published proceedings (name, affiliation, paper title, abstract) are retained permanently as the academic record.</p>
+      <p><strong>10. Data deletion.</strong> You may request deletion of your personal data — excluding already-published proceedings, which form the permanent academic record — by writing to <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a>.</p>
+      <p><strong>11. User rights.</strong> You may request a copy of the personal data we hold about you, request correction of inaccurate data, and request deletion as described above. Write to the contact below for any of these requests.</p>
+      <p><strong>12. Contact.</strong> For any privacy question or request, contact <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     TERMS & CONDITIONS
+══════════════════════════════════════ -->
+<div id="terms" class="page">
+  <div class="hero hero-sm">
+    <div class="hero-tag">Terms &amp; Conditions</div>
+    <h1>Terms &amp; Conditions</h1>
+    <p>Version 1.0 · Effective from 8 August 2026 · Last updated: 8 August 2026</p>
+  </div>
+
+  <div class="section">
+    <div class="about-text">
+      <p><strong>1. Website use.</strong> This website is provided for the purpose of informing prospective authors, reviewers, and attendees about PRASIT 2027 and facilitating submission and registration. You agree not to misuse the site, the submission portal, or attempt to access data that is not yours.</p>
+      <p><strong>2. Submission.</strong> By submitting a paper, you confirm the work is original, that all listed co-authors have consented to the submission, and that you agree to our <a href="#policies" onclick="show('policies')" style="color:var(--maroon);font-weight:600">Publication Ethics and Plagiarism policies</a>.</p>
+      <p><strong>3. Registration.</strong> Registration is only requested after a paper is accepted. Completing registration confirms your intent to present and grants PRASIT permission to include your paper in the proceedings upon full payment.</p>
+      <p><strong>4. Payment.</strong> Registration fees are payable by bank transfer or UPI to PRASIT Technologies as detailed on the <a href="#registration" onclick="show('registration')" style="color:var(--maroon);font-weight:600">Registration page</a>. Fees shown are inclusive of all taxes; no GST is charged.</p>
+      <p><strong>5. Cancellation &amp; refunds.</strong> See our <a href="#policies" onclick="show('policies')" style="color:var(--maroon);font-weight:600">Withdrawal &amp; Refund Policy</a> for the full schedule: full refund more than 30 days before the conference, 50% within 15–30 days, no refund within 14 days.</p>
+      <p><strong>6. Publication.</strong> Accepted, registered papers are published in the PRASIT 2027 proceedings with a CrossRef DOI, under the terms described on our <a href="#publication" onclick="show('publication')" style="color:var(--maroon);font-weight:600">Publication page</a>.</p>
+      <p><strong>7. Copyright.</strong> Authors retain copyright of their work and grant PRASIT a non-exclusive license to publish and distribute it as part of the proceedings, as detailed on the Publication page.</p>
+      <p><strong>8. Certificates.</strong> Certificates of presentation are issued to registered authors who present their paper during the conference sessions. Certificates are not issued for accepted-but-unregistered or non-presenting papers.</p>
+      <p><strong>9. Code of conduct.</strong> All participants — authors, reviewers, committee members, and attendees — are expected to engage respectfully. Harassment, discrimination, or disruptive behavior during sessions may result in removal from the conference without refund.</p>
+      <p><strong>10. Liability.</strong> PRASIT is not liable for indirect losses arising from participation, including but not limited to travel, technical, or connectivity issues on the author's or attendee's end during online sessions.</p>
+      <p><strong>11. Changes to the conference.</strong> PRASIT may need to adjust session timings, the video platform, or the programme schedule. Material changes will be communicated to registered participants by email in advance where possible.</p>
+      <p><strong>12. Force majeure.</strong> PRASIT is not liable for delays or cancellations caused by circumstances beyond reasonable control (natural disasters, government action, internet infrastructure failure, etc.). In such cases, our cancellation refund terms apply.</p>
+    </div>
+    <div class="notice">Questions about these terms can be sent to <a href="mailto:contact@prasit.in" style="color:var(--maroon);font-weight:600">contact@prasit.in</a>.</div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>PRASIT 2027</h4>
+      <a href="#about" onclick="show('about')">About</a>
+      <a href="#cfp" onclick="show('cfp')">Call for Papers</a>
+      <a href="#dates" onclick="show('dates')">Important Dates</a>
+    </div>
+    <div class="footer-col">
+      <h4>Authors</h4>
+      <a href="#cfp" onclick="show('cfp')">Submission</a>
+      <a href="#cfp" onclick="show('cfp')">Formatting</a>
+      <a href="#review" onclick="show('review')">Review Process</a>
+      <a href="#registration" onclick="show('registration')">Registration</a>
+    </div>
+    <div class="footer-col">
+      <h4>Publication</h4>
+      <a href="#publication" onclick="show('publication')">Proceedings</a>
+      <a href="#publication" onclick="show('publication')">DOI</a>
+      <a href="#publication" onclick="show('publication')">Open Access</a>
+      <a href="#publication" onclick="show('publication')">Indexing Status</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#privacy" onclick="show('privacy')">Privacy Policy</a>
+      <a href="#terms" onclick="show('terms')">Terms &amp; Conditions</a>
+      <a href="#policies" onclick="show('policies')">Refund Policy</a>
+      <a href="#policies" onclick="show('policies')">Publication Ethics</a>
+      <a href="#contact" onclick="show('contact')">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-logo" style="margin-bottom:6px">प्रसार</div>
+    <p>prasit.in &nbsp;|&nbsp; contact@prasit.in</p>
+    <p style="margin-top:6px;font-size:10.5px;color:#555">Organized by PRASIT Technologies, Chennai, India</p>
+    <p style="margin-top:4px;font-size:10.5px">© 2027 PRASIT Technologies. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const VALID_PAGES = ['home','about','cfp','dates','committee','review','publication','faq','programme','registration','policies','contact','privacy','terms'];
+
+// ── Countdown timer — cycles automatically to the next upcoming deadline ──
+const CONFERENCE_DEADLINES = [
+  { label: 'Paper Submission Deadline',        date: '2026-11-30T23:59:00+05:30', display: '30 November 2026 · 23:59 IST' },
+  { label: 'Review Deadline',                  date: '2027-01-15T23:59:00+05:30', display: '15 January 2027 · 23:59 IST' },
+  { label: 'Acceptance Notification',          date: '2027-01-31T23:59:00+05:30', display: '31 January 2027 · 23:59 IST' },
+  { label: 'Camera-Ready Submission Deadline', date: '2027-02-20T23:59:00+05:30', display: '20 February 2027 · 23:59 IST' },
+  { label: 'Conference Begins',                date: '2027-03-15T09:30:00+05:30', display: '15–16 March 2027 · 09:30 IST' }
+];
+
+function updateCountdown() {
+  const labelEl = document.getElementById('cdLabel');
+  const subEl = document.getElementById('cdSub');
+  const clockEl = document.getElementById('cdClock');
+  if (!labelEl) return; // countdown widget not on this page
+
+  const now = new Date();
+  const next = CONFERENCE_DEADLINES.find(d => new Date(d.date) > now);
+
+  if (!next) {
+    labelEl.textContent = 'PRASIT 2027';
+    subEl.textContent = 'Conference in progress or concluded';
+    clockEl.style.display = 'none';
+    return;
+  }
+
+  const diff = new Date(next.date) - now;
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+
+  labelEl.textContent = next.label;
+  subEl.textContent = next.display;
+  document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
+  document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('cdMins').textContent = String(mins).padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 30000);
+
+
+function show(id, updateHash = true) {
+  if (!VALID_PAGES.includes(id)) id = 'home';
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // Deactivate all nav links (desktop + mobile)
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => a.classList.remove('active'));
+  const moreBtn = document.getElementById('navMoreBtn');
+  if (moreBtn) moreBtn.classList.remove('active');
+  // Show target page
+  const targetPage = document.getElementById(id);
+  targetPage.classList.add('active');
+  // Activate desktop nav link
+  const desktopLink = document.getElementById('nav-' + id);
+  if (desktopLink) {
+    desktopLink.classList.add('active');
+    // If the active link lives inside the More dropdown, mark the More button active too
+    if (desktopLink.closest('.dropdown-menu') && moreBtn) moreBtn.classList.add('active');
+  }
+  // Activate mobile nav link
+  const mobileLink = document.getElementById('mnav-' + id);
+  if (mobileLink) mobileLink.classList.add('active');
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Move focus to the new page's heading so screen readers announce the change
+  const heading = targetPage.querySelector('h1');
+  if (heading) {
+    heading.setAttribute('tabindex', '-1');
+    heading.focus();
+  }
+  // Reflect the current page in the URL so it can be shared/bookmarked and
+  // browser back/forward works, without triggering our own hashchange listener twice
+  if (updateHash && location.hash !== '#' + id) {
+    history.pushState(null, '', '#' + id);
+  }
+  // Prevent default
+  return false;
+}
+
+// ── "More" nav dropdown ──
+function toggleMoreMenu(e) {
+  e.stopPropagation();
+  const menu = document.getElementById('navMoreMenu');
+  const btn = document.getElementById('navMoreBtn');
+  const isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+function closeMoreMenu() {
+  const menu = document.getElementById('navMoreMenu');
+  const btn = document.getElementById('navMoreBtn');
+  if (menu) menu.classList.remove('open');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+}
+document.addEventListener('click', (e) => {
+  const dropdown = document.querySelector('.nav-dropdown');
+  if (dropdown && !dropdown.contains(e.target)) closeMoreMenu();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMoreMenu();
+});
+
+// Handle browser back/forward and directly-visited/shared links like site.com/#cfp
+function routeFromHash() {
+  const id = location.hash.replace('#', '') || 'home';
+  show(id, false);
+}
+window.addEventListener('hashchange', routeFromHash);
+if (location.hash) {
+  routeFromHash();
+}
+
+// Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+
+function closeMobile() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Close mobile menu on outside click
+document.addEventListener('click', (e) => {
+  if (mobileMenu.classList.contains('open') &&
+      !mobileMenu.contains(e.target) &&
+      !hamburger.contains(e.target)) {
+    closeMobile();
+  }
+});
+
+// Prevent default on all nav links
+document.querySelectorAll('.nav-links a, .mobile-menu a, .footer-col a').forEach(a => {
+  a.addEventListener('click', e => e.preventDefault());
+});
+</script>
+</body>
+</html>
