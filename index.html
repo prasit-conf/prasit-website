@@ -1706,7 +1706,7 @@ footer .gold { color: var(--gold); }
         <li>File format <span>PDF only</span></li>
         <li>Plagiarism threshold <span>Below 15%</span></li>
         <li>Review type <span>Double-blind</span></li>
-        <li>Submission platform <span>PRASIT Portal (prasit-portal.vercel.app)</span></li>
+        <li>Submission platform <span>PRASIT Portal</span></li>
         <li>Language <span>English only</span></li>
       </ul>
     </div>
@@ -2287,7 +2287,7 @@ footer .gold { color: var(--gold); }
       </div>
       <div class="contact-card">
         <h4><span class="icon" aria-hidden="true">📄</span> Paper submissions</h4>
-        <p>Via the PRASIT Submission Portal only.<br>Do not email papers directly.<br><br><a href="https://portal.prasit.in/" target="_blank" rel="noopener">prasit-portal.vercel.app</a></p>
+        <p>Via the PRASIT Submission Portal only.<br>Do not email papers directly.<br><br><a href="https://portal.prasit.in/" target="_blank" rel="noopener">portal.prasit.in</a></p>
       </div>
       <div class="contact-card">
         <h4><span class="icon" aria-hidden="true">👥</span> Join as reviewer</h4>
@@ -2466,8 +2466,8 @@ footer .gold { color: var(--gold); }
       <p><strong>1. Data collected.</strong> When you submit a paper, register, or contact us, we collect your name, email address, institutional affiliation, and any information you voluntarily provide. Paper content is collected for the purpose of review and, if accepted, publication. Bank transfer/UPI payment confirmations are collected to verify registration.</p>
       <p><strong>2. Purpose.</strong> Data is collected solely to operate the conference: processing submissions, assigning reviewers, sending acceptance/rejection notifications, confirming registration, producing certificates, and publishing proceedings.</p>
       <p><strong>3. Legal basis.</strong> We process your data on the basis of your consent (given at submission/registration) and to perform the service you have requested (paper review, conference participation).</p>
-      <p><strong>4. Data storage.</strong> Submission, review, and registration data is stored on the PRASIT Submission Portal (prasit-portal.vercel.app), hosted on Vercel's infrastructure.</p>
-      <p><strong>5. Third-party processors.</strong> We use the PRASIT Submission Portal (hosting: Vercel) to manage submissions and registration, and CrossRef to register DOIs for accepted papers. We do not sell, rent, or share personal data with third parties for commercial or marketing purposes.</p>
+      <p><strong>4. Data storage.</strong> Submission, review, and registration data is stored on the PRASIT Submission Portal (portal.prasit.in)</p>
+      <p><strong>5. Third-party processors.</strong> We use the PRASIT Submission Portal to manage submissions and registration, and CrossRef to register DOIs for accepted papers. We do not sell, rent, or share personal data with third parties for commercial or marketing purposes.</p>
       <p><strong>6. Payment data.</strong> Registration is paid via bank transfer or UPI directly to PRASIT Technologies. We do not collect or store full bank account numbers or UPI PINs on our systems — payment confirmation (transaction reference/screenshot) is retained for reconciliation only.</p>
       <p><strong>7. Cookies.</strong> The main conference website (prasit.in) does not use tracking or advertising cookies. The submission portal uses only essential session cookies required to keep you logged in.</p>
       <p><strong>8. Analytics.</strong> We may use basic, privacy-respecting website analytics (e.g. aggregate page-visit counts) to understand site usage. This data is not linked to your submission or registration identity.</p>
@@ -2554,11 +2554,11 @@ const VALID_PAGES = ['home','about','cfp','dates','committee','review','publicat
 
 // ── Countdown timer — cycles automatically to the next upcoming deadline ──
 const CONFERENCE_DEADLINES = [
-  { label: 'Paper Submission Deadline',        date: '2026-11-30T23:59:00+05:30', display: '20 December 2026 · 23:59 IST' },
-  { label: 'Review Deadline',                  date: '2027-01-15T23:59:00+05:30', display: '24 January 2027 · 23:59 IST' },
-  { label: 'Acceptance Notification',          date: '2027-01-31T23:59:00+05:30', display: '29 January 2027 · 23:59 IST' },
-  { label: 'Camera-Ready Submission Deadline', date: '2027-02-20T23:59:00+05:30', display: '7 February 2027 · 23:59 IST' },
-  { label: 'Conference Begins',                date: '2027-03-15T09:30:00+05:30', display: '15–16 February 2027 · 09:30 IST' }
+  { label: 'Paper Submission Deadline',        date: '2026-12-20T23:59:00+05:30', display: '20 December 2026 · 23:59 IST' },
+  { label: 'Review Deadline',                  date: '2027-01-24T23:59:00+05:30', display: '24 January 2027 · 23:59 IST' },
+  { label: 'Acceptance Notification',          date: '2027-01-29T23:59:00+05:30', display: '29 January 2027 · 23:59 IST' },
+  { label: 'Camera-Ready Submission Deadline', date: '2027-02-07T23:59:00+05:30', display: '07 February 2027 · 23:59 IST' },
+  { label: 'Conference Begins',                date: '2027-02-15T09:30:00+05:30', display: '15–16 February 2027 · 09:30 IST' }
 ];
 
 function updateCountdown() {
